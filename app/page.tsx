@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import RequestServiceForm from "@/components/RequestServiceForm";
 import { routes, business } from "@/lib/routes";
 import { heroStats, trustItems, services, counties, reviews } from "@/lib/home-data";
 import styles from "./page.module.css";
@@ -25,9 +24,9 @@ export default function HomePage() {
               <a href={business.phoneHref} className={styles.btnCopper}>
                 {business.phone}
               </a>
-              <a href="#request-form" className={styles.btnOutlineOnDark}>
+              <Link href={routes.contact} className={styles.btnOutlineOnDark}>
                 Request Service
-              </a>
+              </Link>
             </div>
             <div className={styles.heroStats}>
               {heroStats.map((stat) => (
@@ -39,7 +38,17 @@ export default function HomePage() {
             </div>
           </div>
 
-          <RequestServiceForm />
+          <div className={styles.heroPhoto}>
+            <Image
+              src="/uploads/truck-real.webp"
+              alt="Bolan Septic pump truck parked at the yard"
+              width={1782}
+              height={883}
+              sizes="(max-width: 900px) 100vw, 560px"
+              className={styles.heroPhotoImg}
+              priority
+            />
+          </div>
         </div>
       </section>
 
