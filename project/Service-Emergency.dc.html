@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="24-hour emergency septic service in Grays Harbor, Thurston, Mason & Lewis Counties, WA. Backups, alarms and overflows — call (360) 956-0134.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style id="__bolan_reset">*{box-sizing:border-box;}body{margin:0;background:oklch(97% 0.01 75);}a{text-decoration:none;color:inherit;}</style>
+</helmet>
+<div style="font-family:'Source Sans 3',sans-serif;color:oklch(16% 0.01 250);">
+  <dc-import name="Header" active-page="services" hint-size="100%,120px"></dc-import>
+
+  <section style="background:oklch(14% 0.02 250);padding:clamp(48px,6vw,84px) clamp(20px,4vw,48px);">
+    <div style="max-width:800px;margin:0 auto;text-align:center;">
+      <div style="font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(60% 0.14 40);margin-bottom:18px;">24-Hour Emergency Line — Closed Saturdays</div>
+      <h1 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(30px,4.2vw,50px);color:oklch(98% 0.006 80);margin:0 0 18px;">Sewage Backup or Alarm Going Off? Call Now.</h1>
+      <p style="font-size:18px;color:oklch(76% 0.015 250);margin:0 0 30px;max-width:56ch;margin-left:auto;margin-right:auto;">A septic emergency doesn't wait for business hours — neither do we. We respond to backups, high-water alarms, overflowing tanks and sewage odors across our service area.</p>
+      <a href="tel:+13609560134" style="display:inline-block;background:oklch(55% 0.13 40);color:white;font-weight:700;font-size:19px;padding:18px 36px;border-radius:3px;">Call (360) 956-0134</a>
+    </div>
+  </section>
+
+  <section style="max-width:920px;margin:0 auto;padding:64px clamp(20px,4vw,48px);">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:28px;margin:0 0 20px;">Signs You Need Emergency Service</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 32px;margin-bottom:48px;">
+      <sc-for list="{{ signs }}" as="s" hint-placeholder-count="6">
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid oklch(88% 0.012 75);">
+          <span style="width:7px;height:7px;margin-top:8px;background:oklch(55% 0.13 40);flex-shrink:0;"></span>
+          <span style="font-size:15.5px;line-height:1.5;">{{ s }}</span>
+        </div>
+      </sc-for>
+    </div>
+
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:28px;margin:0 0 16px;">While You Wait for Us</h2>
+    <div style="display:flex;flex-direction:column;gap:0;margin-bottom:48px;">
+      <sc-for list="{{ tips }}" as="tip" hint-placeholder-count="4">
+        <div style="display:flex;gap:20px;padding:18px 0;border-bottom:1px solid oklch(88% 0.012 75);">
+          <div style="font-family:'Source Serif 4',serif;font-weight:700;font-size:20px;color:oklch(55% 0.13 40);min-width:28px;">{{ $index }}</div>
+          <div style="font-size:15.5px;color:oklch(30% 0.015 255);line-height:1.6;">{{ tip }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="background:oklch(94% 0.014 75);border-radius:6px;padding:32px;">
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:22px;margin:0 0 12px;">Emergency Response Across Southwest Washington</h2>
+      <p style="font-size:16px;line-height:1.7;color:oklch(30% 0.015 255);margin:0;">We respond to septic emergencies in Aberdeen, Hoquiam, Ocean Shores, Montesano and Elma in Grays Harbor County; Olympia, Lacey and Tumwater in Thurston County; Shelton in Mason County; and Centralia and Chehalis in Lewis County. <a href="Service-Areas.dc.html" style="color:oklch(19% 0.03 250);font-weight:700;border-bottom:1px solid oklch(19% 0.03 250);">See our full service area</a></p>
+    </div>
+  </section>
+
+  <section style="background:oklch(14% 0.02 250);padding:60px clamp(20px,4vw,48px);text-align:center;">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(26px,3vw,34px);color:oklch(98% 0.006 80);margin:0 0 24px;">Don't Wait — Call Bolan Septic Now.</h2>
+    <a href="tel:+13609560134" style="display:inline-block;background:oklch(55% 0.13 40);color:white;font-weight:700;font-size:18px;padding:17px 32px;border-radius:3px;">(360) 956-0134</a>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,300px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      signs: [
+        'Sewage backing up into tubs, toilets or drains',
+        'High-water alarm sounding on a pump system',
+        'Standing sewage or strong odor in the yard',
+        'Tank overflowing after heavy rain',
+        'Gurgling drains throughout the house',
+        'Sewage odor inside the home',
+      ],
+      tips: [
+        'Stop using water — toilets, sinks, showers and laundry — until we arrive.',
+        'Keep people and pets away from any standing water or wet areas in the yard.',
+        'If safe, locate your tank lids or risers so our crew can get to work faster.',
+        'Note when the problem started and anything unusual (recent heavy use, rain, etc.) to tell our technician.',
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

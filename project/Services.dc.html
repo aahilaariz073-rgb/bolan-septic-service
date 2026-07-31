@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Septic services in Grays Harbor, Thurston, Mason & Lewis Counties, WA: pumping, inspections, repair, drain field and new installation. Family-owned since 2000.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style id="__bolan_reset">*{box-sizing:border-box;}body{margin:0;background:oklch(97% 0.01 75);}a{text-decoration:none;color:inherit;}</style>
+</helmet>
+<div style="font-family:'Source Sans 3',sans-serif;color:oklch(16% 0.01 250);">
+  <dc-import name="Header" active-page="services" hint-size="100%,120px"></dc-import>
+
+  <section style="background:oklch(19% 0.03 250);padding:clamp(48px,6vw,84px) clamp(20px,4vw,48px);">
+    <div style="max-width:760px;margin:0 auto;text-align:center;">
+      <div style="font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(64% 0.11 45);margin-bottom:16px;">Our Services</div>
+      <h1 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(32px,4.2vw,50px);color:oklch(98% 0.006 80);margin:0 0 16px;">Septic Services for Every Job — Big or Small</h1>
+      <p style="font-size:18px;color:oklch(76% 0.015 250);margin:0;">Pumping, inspections, repair, drain fields and new installations across Grays Harbor, Thurston, Mason &amp; Lewis Counties.</p>
+    </div>
+  </section>
+
+  <section style="padding:72px clamp(20px,4vw,48px);max-width:1200px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0;border-top:1px solid oklch(88% 0.012 75);border-left:1px solid oklch(88% 0.012 75);">
+      <sc-for list="{{ services }}" as="svc" hint-placeholder-count="5">
+        <a href="{{ svc.href }}" style="display:flex;flex-direction:column;padding:36px 30px;border-right:1px solid oklch(88% 0.012 75);border-bottom:1px solid oklch(88% 0.012 75);">
+          <div style="font-family:'Source Serif 4',serif;font-weight:700;font-size:15px;color:oklch(55% 0.13 40);margin-bottom:18px;">{{ svc.num }}</div>
+          <div style="font-family:'Source Serif 4',serif;font-weight:700;font-size:22px;margin-bottom:12px;">{{ svc.title }}</div>
+          <p style="font-size:15.5px;color:oklch(42% 0.015 255);margin:0 0 18px;line-height:1.6;flex:1;">{{ svc.desc }}</p>
+          <span style="font-weight:600;font-size:14.5px;color:oklch(19% 0.03 250);border-bottom:1px solid oklch(19% 0.03 250);padding-bottom:2px;align-self:flex-start;">View details</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="background:oklch(19% 0.03 250);padding:60px clamp(20px,4vw,48px);text-align:center;">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(26px,3vw,34px);color:oklch(98% 0.006 80);margin:0 0 16px;">Not Sure What Your System Needs?</h2>
+    <p style="font-size:17px;color:oklch(76% 0.015 250);margin:0 0 28px;">Call us and describe the problem — we'll tell you exactly what service to book.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
+      <a href="tel:+13609560134" style="background:oklch(55% 0.13 40);color:white;font-weight:700;font-size:17px;padding:16px 30px;border-radius:3px;">(360) 956-0134</a>
+      <a href="Contact.dc.html" style="background:transparent;border:1px solid oklch(40% 0.02 250);color:oklch(94% 0.006 80);font-weight:600;font-size:17px;padding:15px 28px;border-radius:3px;">Request Service</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,300px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      services: [
+        { num: '01', title: 'Septic Pumping', desc: 'Routine and emergency tank pumping. We recommend pumping every 3–5 years for most Western Washington homes.', href: 'Service-Pumping.dc.html' },
+        { num: '02', title: 'Septic Inspections', desc: 'Real estate / OSS inspections for home sales, plus routine operation & maintenance checkups.', href: 'Service-Inspections.dc.html' },
+        { num: '03', title: 'Repair & Drain Field', desc: 'Tank, baffle, riser and line repairs, plus drain field diagnosis and rehabilitation.', href: 'Service-Repair-Drainfield.dc.html' },
+        { num: '04', title: 'Installation', desc: 'New septic system design coordination and installation for new construction or full replacements.', href: 'Service-Installation.dc.html' },
+        { num: '05', title: 'Emergency Service', desc: '24-hour response for backups, alarms, overflowing tanks and sewage odors.', href: 'Service-Emergency.dc.html' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

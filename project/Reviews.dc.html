@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Read reviews for Bolan Septic Service — 5.0 out of 5 stars on Google from customers across Grays Harbor, Thurston, Mason & Lewis Counties, WA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style id="__bolan_reset">*{box-sizing:border-box;}body{margin:0;background:oklch(97% 0.01 75);}a{text-decoration:none;color:inherit;}</style>
+</helmet>
+<div style="font-family:'Source Sans 3',sans-serif;color:oklch(16% 0.01 250);">
+  <dc-import name="Header" active-page="reviews" hint-size="100%,120px"></dc-import>
+
+  <section style="background:oklch(19% 0.03 250);padding:clamp(48px,6vw,80px) clamp(20px,4vw,48px);text-align:center;">
+    <div style="font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(64% 0.11 45);margin-bottom:16px;">Reviews</div>
+    <h1 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(30px,4vw,46px);color:oklch(98% 0.006 80);margin:0 0 18px;">What Our Customers Say</h1>
+    <div style="font-size:20px;font-weight:700;color:oklch(94% 0.006 80);">★★★★★ &nbsp;5.0 out of 5 — 24 Google Reviews</div>
+  </section>
+
+  <section style="max-width:1100px;margin:0 auto;padding:64px clamp(20px,4vw,48px);">
+    <div style="background:oklch(98% 0.006 80);border:1px solid oklch(88% 0.012 75);border-radius:6px;padding:22px 28px;margin-bottom:44px;font-size:15px;color:oklch(42% 0.015 255);">
+      Note: the quotes below are placeholders showing how your Google reviews will be presented — swap them for real customer quotes once pulled from your Google Business Profile.
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:oklch(88% 0.012 75);">
+      <sc-for list="{{ reviews }}" as="rv" hint-placeholder-count="6">
+        <div style="background:oklch(98% 0.006 80);padding:28px;">
+          <div style="font-size:15px;color:oklch(60% 0.13 55);margin-bottom:10px;">★★★★★</div>
+          <p style="font-size:15.5px;line-height:1.6;color:oklch(26% 0.015 255);margin:0 0 16px;">"{{ rv.quote }}"</p>
+          <div style="font-weight:600;font-size:13.5px;color:oklch(46% 0.015 255);">{{ rv.name }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="background:oklch(94% 0.014 75);padding:56px clamp(20px,4vw,48px);text-align:center;">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:26px;margin:0 0 14px;">Had a Good Experience With Us?</h2>
+    <p style="font-size:16.5px;color:oklch(30% 0.015 255);margin:0 0 24px;">A quick Google review helps other homeowners in Grays Harbor, Thurston, Mason and Lewis Counties find us.</p>
+    <a href="https://share.google/TNPxfQXRsNyVr5hCk" style="display:inline-block;background:oklch(19% 0.03 250);color:white;font-weight:700;font-size:16px;padding:15px 28px;border-radius:3px;">Leave a Google Review</a>
+  </section>
+
+  <section style="background:oklch(19% 0.03 250);padding:60px clamp(20px,4vw,48px);text-align:center;">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(26px,3vw,34px);color:oklch(98% 0.006 80);margin:0 0 24px;">Ready to Join Our List of Happy Customers?</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
+      <a href="tel:+13609560134" style="background:oklch(55% 0.13 40);color:white;font-weight:700;font-size:17px;padding:16px 30px;border-radius:3px;">(360) 956-0134</a>
+      <a href="Contact.dc.html" style="background:transparent;border:1px solid oklch(40% 0.02 250);color:oklch(94% 0.006 80);font-weight:600;font-size:17px;padding:15px 28px;border-radius:3px;">Request Service</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,300px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      reviews: [
+        { quote: 'Showed up on time, explained everything, and the price was fair. Exactly what you want from a septic company.', name: 'Google review — swap in real quote' },
+        { quote: 'Needed a real estate inspection fast to close on time. Ricky\u2019s team got it done in a day.', name: 'Google review — swap in real quote' },
+        { quote: 'Called on a Sunday with a backup and they actually picked up and came out. Lifesavers.', name: 'Google review — swap in real quote' },
+        { quote: 'Fair pricing and no pressure to do work I didn\u2019t need. Will use again.', name: 'Google review — swap in real quote' },
+        { quote: 'Family-owned and it shows — felt like talking to a neighbor, not a call center.', name: 'Google review — swap in real quote' },
+        { quote: 'Installed risers so future pumping will be way easier. Great advice, clean work.', name: 'Google review — swap in real quote' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

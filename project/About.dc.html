@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Meet Ricky Bolan, owner of Bolan Septic Service — family-owned and operated in Aberdeen, WA since 2000.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style id="__bolan_reset">*{box-sizing:border-box;}body{margin:0;background:oklch(97% 0.01 75);}a{text-decoration:none;color:inherit;}</style>
+</helmet>
+<div style="font-family:'Source Sans 3',sans-serif;color:oklch(16% 0.01 250);">
+  <dc-import name="Header" active-page="about" hint-size="100%,120px"></dc-import>
+
+  <section style="padding:clamp(48px,6vw,84px) clamp(20px,4vw,48px);max-width:1100px;margin:0 auto;">
+    <div style="display:flex;flex-wrap:wrap;gap:48px;align-items:center;">
+      <div style="flex:1 1 340px;min-width:260px;">
+        <image-slot id="ricky-portrait" shape="rect" style="width:100%;aspect-ratio:4/5;border-radius:4px;" placeholder="Photo of Ricky Bolan"></image-slot>
+      </div>
+      <div style="flex:1 1 420px;">
+        <div style="font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(55% 0.13 40);margin-bottom:16px;">About Us</div>
+        <h1 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(30px,3.8vw,44px);margin:0 0 20px;">Meet Ricky Bolan</h1>
+        <p style="font-size:18px;line-height:1.7;color:oklch(30% 0.015 255);margin:0 0 18px;">Ricky Bolan founded Bolan Septic Service in 2000, running it the way he'd want it run for his own family: show up when you say you will, tell people the truth about what their system needs, and never cut corners on a job buried in someone's yard.</p>
+        <p style="font-size:18px;line-height:1.7;color:oklch(30% 0.015 255);margin:0;">Twenty-five years later, it's still a hands-on, family-run operation — no call centers, no national franchise, no subcontracted crews. Just Ricky and a small local team serving the same counties they grew up in.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:oklch(19% 0.03 250);padding:64px clamp(20px,4vw,48px);">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;">
+      <sc-for list="{{ values }}" as="v" hint-placeholder-count="4">
+        <div style="padding:0 28px 0 0;margin-right:28px;border-right:1px solid oklch(32% 0.02 250);">
+          <h3 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:19px;color:oklch(98% 0.006 80);margin:0 0 10px;">{{ v.title }}</h3>
+          <p style="font-size:15px;line-height:1.6;color:oklch(72% 0.015 250);margin:0;">{{ v.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="max-width:1100px;margin:0 auto;padding:64px clamp(20px,4vw,48px);">
+    <div style="font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(55% 0.13 40);margin-bottom:16px;">Our Crew &amp; Trucks</div>
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:28px;margin:0 0 28px;">The People Who Show Up</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+      <image-slot id="crew-1" shape="rect" style="width:100%;aspect-ratio:4/3;border-radius:4px;" placeholder="Crew photo"></image-slot>
+      <image-slot id="crew-2" shape="rect" style="width:100%;aspect-ratio:4/3;border-radius:4px;" placeholder="Truck / job-site photo"></image-slot>
+      <image-slot id="crew-3" shape="rect" style="width:100%;aspect-ratio:4/3;border-radius:4px;" placeholder="Truck / job-site photo"></image-slot>
+    </div>
+  </section>
+
+  <section style="background:oklch(94% 0.014 75);padding:56px clamp(20px,4vw,48px);">
+    <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;">
+      <sc-for list="{{ credentials }}" as="c" hint-placeholder-count="3">
+        <div style="flex:1 1 260px;padding:0 26px;border-left:1px solid oklch(84% 0.012 75);">
+          <div style="font-family:'Source Serif 4',serif;font-weight:700;font-size:19px;margin-bottom:8px;">{{ c.title }}</div>
+          <div style="font-size:15px;color:oklch(42% 0.015 255);line-height:1.55;">{{ c.desc }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="background:oklch(19% 0.03 250);padding:60px clamp(20px,4vw,48px);text-align:center;">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(26px,3vw,34px);color:oklch(98% 0.006 80);margin:0 0 24px;">Talk to Ricky's Team Today</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
+      <a href="tel:+13609560134" style="background:oklch(55% 0.13 40);color:white;font-weight:700;font-size:17px;padding:16px 30px;border-radius:3px;">(360) 956-0134</a>
+      <a href="Contact.dc.html" style="background:transparent;border:1px solid oklch(40% 0.02 250);color:oklch(94% 0.006 80);font-weight:600;font-size:17px;padding:15px 28px;border-radius:3px;">Request Service</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,300px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      values: [
+        { title: 'Straight Answers', desc: 'We tell you what your system actually needs — not what pads a bill.' },
+        { title: 'On Time, Every Time', desc: 'We give real windows and show up in them.' },
+        { title: 'Local Crew', desc: 'No subcontractors — the people on your property work for Bolan Septic.' },
+        { title: '24-Hour Response', desc: 'Emergencies don\u2019t wait for business hours, and neither do we.' },
+      ],
+      credentials: [
+        { title: 'Licensed & Insured', desc: 'Bonded and insured to work throughout Washington State.' },
+        { title: 'OSS Certified', desc: 'Trained and certified in Washington on-site sewage system standards.' },
+        { title: 'Est. 2000', desc: '25+ years serving the same Southwest Washington counties.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Bolan Septic Service serves Grays Harbor, Thurston, Mason & Lewis Counties, WA — Aberdeen, Hoquiam, Olympia, Montesano, Elma, Shelton, Centralia, Ocean Shores and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style id="__bolan_reset">*{box-sizing:border-box;}body{margin:0;background:oklch(97% 0.01 75);}a{text-decoration:none;color:inherit;}</style>
+</helmet>
+<div style="font-family:'Source Sans 3',sans-serif;color:oklch(16% 0.01 250);">
+  <dc-import name="Header" active-page="areas" hint-size="100%,120px"></dc-import>
+
+  <section style="background:oklch(19% 0.03 250);padding:clamp(48px,6vw,84px) clamp(20px,4vw,48px);">
+    <div style="max-width:760px;margin:0 auto;text-align:center;">
+      <div style="font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(64% 0.11 45);margin-bottom:16px;">Service Areas</div>
+      <h1 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(32px,4.2vw,50px);color:oklch(98% 0.006 80);margin:0 0 16px;">Serving Southwest Washington, Within 50 Miles of Aberdeen</h1>
+      <p style="font-size:18px;color:oklch(76% 0.015 250);margin:0;">Grays Harbor, Thurston, Mason and Lewis Counties — from the coast to the county lines.</p>
+    </div>
+  </section>
+
+  <section style="max-width:1100px;margin:0 auto;padding:64px clamp(20px,4vw,48px);">
+    <sc-for list="{{ counties }}" as="county" hint-placeholder-count="4">
+      <div style="padding:40px 0;border-bottom:1px solid oklch(88% 0.012 75);display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;">
+        <div style="flex:1 1 280px;">
+          <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:26px;margin:0 0 10px;">{{ county.name }}</h2>
+          <p style="font-size:16px;line-height:1.6;color:oklch(42% 0.015 255);margin:0;max-width:44ch;">{{ county.blurb }}</p>
+        </div>
+        <div style="flex:1 1 340px;display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start;">
+          <sc-for list="{{ county.cities }}" as="city" hint-placeholder-count="5">
+            <span style="border:1px solid oklch(84% 0.012 75);font-weight:600;font-size:14.5px;padding:8px 14px;border-radius:3px;">{{ city }}</span>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </section>
+
+  <section style="background:oklch(94% 0.014 75);padding:64px clamp(20px,4vw,48px);">
+    <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:40px;align-items:center;justify-content:space-between;">
+      <div style="flex:1 1 380px;">
+        <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:26px;margin:0 0 14px;">Don't See Your Town Listed?</h2>
+        <p style="font-size:16.5px;line-height:1.65;color:oklch(30% 0.015 255);margin:0;">We serve most areas within roughly 50 miles of our Aberdeen headquarters. If you're just outside these lists, call us — we likely still cover your address.</p>
+      </div>
+      <a href="tel:+13609560134" style="background:oklch(55% 0.13 40);color:white;font-weight:700;font-size:17px;padding:16px 30px;border-radius:3px;white-space:nowrap;">Call (360) 956-0134</a>
+    </div>
+  </section>
+
+  <section style="background:oklch(19% 0.03 250);padding:60px clamp(20px,4vw,48px);text-align:center;">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(26px,3vw,34px);color:oklch(98% 0.006 80);margin:0 0 24px;">Ready to Schedule Service in Your Area?</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
+      <a href="tel:+13609560134" style="background:oklch(55% 0.13 40);color:white;font-weight:700;font-size:17px;padding:16px 30px;border-radius:3px;">(360) 956-0134</a>
+      <a href="Contact.dc.html" style="background:transparent;border:1px solid oklch(40% 0.02 250);color:oklch(94% 0.006 80);font-weight:600;font-size:17px;padding:15px 28px;border-radius:3px;">Request Service</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,300px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      counties: [
+        { name: 'Grays Harbor County', blurb: 'Our home county — from coastal Ocean Shores to the timber towns inland, this is where Bolan Septic started.', cities: ['Aberdeen', 'Hoquiam', 'Ocean Shores', 'Montesano', 'Elma', 'McCleary'] },
+        { name: 'Thurston County', blurb: 'Full-service septic care for Olympia and the surrounding communities, including new construction and real estate inspections.', cities: ['Olympia', 'Lacey', 'Tumwater', 'Yelm', 'Tenino'] },
+        { name: 'Mason County', blurb: 'Serving Shelton and the Hood Canal area with pumping, inspections and repair.', cities: ['Shelton', 'Belfair', 'Allyn'] },
+        { name: 'Lewis County', blurb: 'Reliable septic service for Centralia, Chehalis and surrounding farm and timber properties.', cities: ['Centralia', 'Chehalis', 'Winlock'] },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

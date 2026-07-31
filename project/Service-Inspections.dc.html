@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Septic inspections in Grays Harbor, Thurston, Mason & Lewis Counties, WA — including real estate / OSS inspections for home sales. Fast turnaround for closings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style id="__bolan_reset">*{box-sizing:border-box;}body{margin:0;background:oklch(97% 0.01 75);}a{text-decoration:none;color:inherit;}</style>
+</helmet>
+<div style="font-family:'Source Sans 3',sans-serif;color:oklch(16% 0.01 250);">
+  <dc-import name="Header" active-page="services" hint-size="100%,120px"></dc-import>
+
+  <section style="background:oklch(19% 0.03 250);padding:clamp(44px,5.5vw,72px) clamp(20px,4vw,48px);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="font-weight:600;font-size:14px;color:oklch(66% 0.015 250);margin-bottom:14px;"><a href="Services.dc.html" style="color:oklch(66% 0.015 250);">Services</a> &nbsp;/&nbsp; Septic Inspections</div>
+      <h1 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(30px,3.8vw,46px);color:oklch(98% 0.006 80);margin:0 0 16px;max-width:20ch;">Septic Inspections — Including Real Estate / OSS Inspections</h1>
+      <p style="font-size:18px;color:oklch(76% 0.015 250);margin:0 0 26px;max-width:56ch;">Buying, selling or refinancing a home on a septic system? We provide the OSS inspection reports lenders, buyers and county health departments require — with fast turnaround for closings.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;">
+        <a href="tel:+13609560134" style="background:oklch(55% 0.13 40);color:white;font-weight:700;font-size:16.5px;padding:15px 26px;border-radius:3px;">(360) 956-0134</a>
+        <a href="Contact.dc.html" style="background:transparent;border:1px solid oklch(40% 0.02 250);color:oklch(94% 0.006 80);font-weight:600;font-size:16.5px;padding:14px 24px;border-radius:3px;">Request Service</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:920px;margin:0 auto;padding:64px clamp(20px,4vw,48px);">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border-top:1px solid oklch(88% 0.012 75);border-left:1px solid oklch(88% 0.012 75);margin-bottom:52px;">
+      <sc-for list="{{ types }}" as="t" hint-placeholder-count="2">
+        <div style="padding:28px;border-right:1px solid oklch(88% 0.012 75);border-bottom:1px solid oklch(88% 0.012 75);">
+          <div style="font-family:'Source Serif 4',serif;font-weight:700;font-size:19px;margin-bottom:12px;">{{ t.title }}</div>
+          <p style="font-size:15.5px;color:oklch(42% 0.015 255);line-height:1.6;margin:0;">{{ t.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:28px;margin:0 0 20px;">What We Check</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 32px;margin-bottom:48px;">
+      <sc-for list="{{ checklist }}" as="s" hint-placeholder-count="6">
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid oklch(88% 0.012 75);">
+          <span style="width:7px;height:7px;margin-top:8px;background:oklch(55% 0.13 40);flex-shrink:0;"></span>
+          <span style="font-size:15.5px;line-height:1.5;">{{ s }}</span>
+        </div>
+      </sc-for>
+    </div>
+
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:28px;margin:0 0 16px;">Selling or Buying a Home on Septic?</h2>
+    <p style="font-size:17px;line-height:1.7;color:oklch(30% 0.015 255);margin:0 0 40px;">Most Washington counties require a current OSS (on-site sewage system) inspection report before closing on a home with a septic system. We work directly with real estate agents, title companies and homeowners to get inspections scheduled and reports delivered fast — so financing deadlines don't slip.</p>
+
+    <div style="background:oklch(94% 0.014 75);border-radius:6px;padding:32px;">
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:22px;margin:0 0 12px;">Inspections Across Southwest Washington</h2>
+      <p style="font-size:16px;line-height:1.7;color:oklch(30% 0.015 255);margin:0;">Serving real estate transactions and routine checkups in Aberdeen, Hoquiam, Ocean Shores, Montesano and Elma in Grays Harbor County; Olympia, Lacey and Tumwater in Thurston County; Shelton in Mason County; and Centralia and Chehalis in Lewis County. <a href="Service-Areas.dc.html" style="color:oklch(19% 0.03 250);font-weight:700;border-bottom:1px solid oklch(19% 0.03 250);">See our full service area</a></p>
+    </div>
+  </section>
+
+  <section style="background:oklch(19% 0.03 250);padding:60px clamp(20px,4vw,48px);text-align:center;">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(26px,3vw,34px);color:oklch(98% 0.006 80);margin:0 0 24px;">Closing Deadline? Call Now to Get on the Schedule.</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
+      <a href="tel:+13609560134" style="background:oklch(55% 0.13 40);color:white;font-weight:700;font-size:17px;padding:16px 30px;border-radius:3px;">(360) 956-0134</a>
+      <a href="Contact.dc.html" style="background:transparent;border:1px solid oklch(40% 0.02 250);color:oklch(94% 0.006 80);font-weight:600;font-size:17px;padding:15px 28px;border-radius:3px;">Request Service</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,300px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      types: [
+        { title: 'Real Estate / OSS Inspection', desc: 'A full report on tank, drain field and system condition — the report homebuyers, sellers and lenders need before closing.' },
+        { title: 'Routine O&M Inspection', desc: 'A periodic checkup to catch small issues (worn baffles, root intrusion, high sludge levels) before they become expensive.' },
+      ],
+      checklist: [
+        'Tank condition, lids and risers',
+        'Sludge and scum layer levels',
+        'Baffles, tees and outlet filter',
+        'Drain field surface and drainage',
+        'Pump and alarm function (if equipped)',
+        'Signs of leaks, backups or root intrusion',
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Septic pumping, inspections, repair, drain field and installation service in Aberdeen, Olympia & across Grays Harbor, Thurston, Mason & Lewis Counties, WA. Family-owned since 2000. 24-hour emergency service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style id="__bolan_home_reset">
+  *{box-sizing:border-box;}
+  body{margin:0;background:oklch(97% 0.01 75);}
+  a{text-decoration:none;color:inherit;}
+  input,select{font-family:'Source Sans 3',sans-serif;}
+</style>
+</helmet>
+<div style="font-family:'Source Sans 3',sans-serif;color:oklch(16% 0.01 250);">
+  <dc-import name="Header" active-page="home" hint-size="100%,120px"></dc-import>
+
+  <section data-screen-label="Home Hero" style="background:oklch(19% 0.03 250);padding:clamp(40px,6vw,76px) clamp(20px,4vw,48px) 64px;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start;">
+      <div style="flex:1 1 480px;min-width:280px;">
+        <div style="font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(64% 0.11 45);margin-bottom:18px;">Family-Owned in Aberdeen, WA — Since 2000</div>
+        <h1 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(34px,4.6vw,58px);line-height:1.06;color:oklch(98% 0.006 80);margin:0 0 20px;letter-spacing:-0.01em;">Septic Pumping, Inspections &amp; Repair You Can Trust</h1>
+        <p style="font-size:19px;line-height:1.6;color:oklch(76% 0.015 250);margin:0 0 28px;max-width:52ch;">Serving Grays Harbor, Thurston, Mason &amp; Lewis Counties with honest, on-time septic service — pumping, real estate inspections, repairs, drain fields and new installations.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:34px;">
+          <a href="tel:+13609560134" style="display:flex;align-items:center;gap:10px;background:oklch(55% 0.13 40);color:oklch(99% 0.005 80);font-weight:700;font-size:17px;padding:16px 28px;border-radius:3px;">(360) 956-0134</a>
+          <a href="#request-form" style="display:flex;align-items:center;gap:10px;background:transparent;border:1px solid oklch(40% 0.02 250);color:oklch(94% 0.006 80);font-weight:600;font-size:17px;padding:15px 26px;border-radius:3px;">Request Service</a>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0;">
+          <sc-for list="{{ heroStats }}" as="stat" hint-placeholder-count="3">
+            <div style="padding:0 26px 0 0;margin-right:26px;border-right:1px solid oklch(32% 0.02 250);">
+              <div style="font-family:'Source Serif 4',serif;font-weight:700;font-size:24px;color:oklch(96% 0.006 80);">{{ stat.value }}</div>
+              <div style="font-size:13.5px;color:oklch(66% 0.015 250);">{{ stat.label }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div id="request-form" style="flex:1 1 380px;min-width:300px;max-width:440px;background:oklch(98% 0.006 80);border-radius:6px;padding:30px;box-shadow:0 24px 48px oklch(10% 0.02 250 / 0.3);">
+        <sc-if value="{{ !submitted }}" hint-placeholder-val="{{ true }}">
+          <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:23px;margin:0 0 5px;color:oklch(16% 0.01 250);">Request Service</h2>
+          <p style="font-size:15px;color:oklch(40% 0.015 255);margin:0 0 20px;">We'll call you back to confirm a time — usually same day.</p>
+          <form onSubmit="{{ handleSubmit }}" style="display:flex;flex-direction:column;gap:12px;">
+            <input required="" type="text" placeholder="Full name" style="padding:13px 14px;border-radius:4px;border:1px solid oklch(82% 0.012 75);font-size:16px;" />
+            <input required="" type="tel" placeholder="Phone number" style="padding:13px 14px;border-radius:4px;border:1px solid oklch(82% 0.012 75);font-size:16px;" />
+            <input required="" type="text" placeholder="Service address" style="padding:13px 14px;border-radius:4px;border:1px solid oklch(82% 0.012 75);font-size:16px;" />
+            <select required="" defaultValue="" style="padding:13px 14px;border-radius:4px;border:1px solid oklch(82% 0.012 75);font-size:16px;color:oklch(16% 0.01 250);">
+              <option value="" disabled="">Service needed</option>
+              <option>Septic Pumping</option>
+              <option>Septic Inspection (Real Estate/OSS)</option>
+              <option>Repair / Drain Field</option>
+              <option>New Installation</option>
+              <option>Emergency — System Backed Up</option>
+              <option>Not Sure</option>
+            </select>
+            <select required="" defaultValue="" style="padding:13px 14px;border-radius:4px;border:1px solid oklch(82% 0.012 75);font-size:16px;color:oklch(16% 0.01 250);">
+              <option value="" disabled="">How urgent is this?</option>
+              <option>Emergency — need help today</option>
+              <option>This week</option>
+              <option>Just planning ahead</option>
+            </select>
+            <button type="submit" style="margin-top:6px;background:oklch(19% 0.03 250);color:oklch(99% 0.005 80);border:none;font-weight:700;font-size:16.5px;padding:15px;border-radius:4px;cursor:pointer;">Send Request</button>
+          </form>
+        </sc-if>
+        <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+          <div style="text-align:center;padding:34px 8px;">
+            <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:23px;margin:0 0 10px;">Request Received</h2>
+            <p style="font-size:16px;color:oklch(40% 0.015 255);margin:0;">Thanks — Ricky's team will call you back shortly. For anything urgent, call <a href="tel:+13609560134" style="color:oklch(42% 0.09 250);font-weight:700;">(360) 956-0134</a> now.</p>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Trust Bar" style="background:oklch(98% 0.006 80);border-bottom:1px solid oklch(88% 0.012 75);padding:30px clamp(20px,4vw,48px);">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;">
+      <sc-for list="{{ trustItems }}" as="t" hint-placeholder-count="4">
+        <div style="flex:1 1 220px;padding:0 24px;border-left:1px solid oklch(88% 0.012 75);">
+          <div style="font-family:'Source Serif 4',serif;font-weight:700;font-size:22px;color:oklch(19% 0.03 250);">{{ t.value }}</div>
+          <div style="font-size:14.5px;color:oklch(42% 0.015 255);">{{ t.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="Services Overview" style="padding:72px clamp(20px,4vw,48px);max-width:1200px;margin:0 auto;">
+    <div style="max-width:640px;margin:0 0 44px;">
+      <div style="font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(55% 0.13 40);margin-bottom:12px;">What We Do</div>
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(28px,3.2vw,38px);margin:0;">Full-Service Septic Care</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0;border-top:1px solid oklch(88% 0.012 75);border-left:1px solid oklch(88% 0.012 75);">
+      <sc-for list="{{ services }}" as="svc" hint-placeholder-count="6">
+        <a href="{{ svc.href }}" style="display:block;padding:32px 28px;border-right:1px solid oklch(88% 0.012 75);border-bottom:1px solid oklch(88% 0.012 75);">
+          <div style="font-family:'Source Serif 4',serif;font-weight:700;font-size:15px;color:oklch(55% 0.13 40);margin-bottom:16px;">{{ svc.num }}</div>
+          <div style="font-family:'Source Serif 4',serif;font-weight:700;font-size:20px;margin-bottom:10px;">{{ svc.title }}</div>
+          <p style="font-size:15px;color:oklch(42% 0.015 255);margin:0 0 14px;line-height:1.55;">{{ svc.desc }}</p>
+          <span style="font-weight:600;font-size:14.5px;color:oklch(19% 0.03 250);border-bottom:1px solid oklch(19% 0.03 250);padding-bottom:2px;">Learn more</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="Truck Photo Band" style="background:oklch(94% 0.014 75);padding:72px clamp(20px,4vw,48px);">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap-reverse;gap:44px;align-items:center;">
+      <div style="flex:1 1 420px;">
+        <img src="uploads/Gemini_Generated_Image_oakc3soakc3soakc.png" alt="Bolan Septic pump truck" style="width:100%;border-radius:4px;display:block;" />
+      </div>
+      <div style="flex:1 1 380px;min-width:280px;">
+        <div style="font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(55% 0.13 40);margin-bottom:14px;">Local &amp; Family-Run</div>
+        <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(26px,2.8vw,34px);margin:0 0 16px;">One Call. One Crew You Can Trust.</h2>
+        <p style="font-size:17px;line-height:1.65;color:oklch(30% 0.015 255);margin:0 0 20px;">Ricky Bolan has run this company since 2000 — no call centers, no subcontractors. When you call Bolan Septic, you get a real local crew that shows up on time and explains exactly what your system needs.</p>
+        <a href="About.dc.html" style="font-weight:600;font-size:15.5px;color:oklch(19% 0.03 250);border-bottom:1px solid oklch(19% 0.03 250);padding-bottom:2px;">Meet the owner</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Service Area" style="padding:72px clamp(20px,4vw,48px);max-width:1200px;margin:0 auto;">
+    <div style="display:flex;flex-wrap:wrap;gap:44px;align-items:stretch;justify-content:space-between;">
+      <div style="flex:1 1 380px;">
+        <div style="font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(55% 0.13 40);margin-bottom:14px;">Where We Work</div>
+        <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(26px,2.8vw,34px);margin:0 0 16px;">Proudly Serving Southwest Washington</h2>
+        <p style="font-size:17px;line-height:1.65;color:oklch(30% 0.015 255);margin:0 0 22px;">We serve homes and businesses within roughly 50 miles of Aberdeen — Grays Harbor, Thurston, Mason and Lewis Counties.</p>
+        <div style="display:flex;flex-direction:column;gap:2px;margin-bottom:24px;">
+          <sc-for list="{{ counties }}" as="c" hint-placeholder-count="4">
+            <div style="padding:12px 0;border-bottom:1px solid oklch(88% 0.012 75);font-weight:600;font-size:16px;">{{ c }}</div>
+          </sc-for>
+        </div>
+        <a href="Service-Areas.dc.html" style="font-weight:600;font-size:15.5px;color:oklch(19% 0.03 250);border-bottom:1px solid oklch(19% 0.03 250);padding-bottom:2px;">See all cities we serve</a>
+      </div>
+      <div style="flex:1 1 320px;min-width:260px;background:oklch(19% 0.03 250);border-radius:6px;padding:36px;color:white;">
+        <div style="font-weight:700;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:oklch(66% 0.015 250);margin-bottom:12px;">Headquartered In Aberdeen</div>
+        <div style="font-family:'Source Serif 4',serif;font-size:20px;font-weight:700;margin-bottom:6px;">800 E Wishkah St, Unit 204</div>
+        <div style="font-size:16px;color:oklch(74% 0.015 250);margin-bottom:24px;">Aberdeen, WA 98520</div>
+        <a href="tel:+13609560134" style="display:inline-block;background:oklch(55% 0.13 40);color:white;font-weight:700;padding:13px 22px;border-radius:3px;">Call (360) 956-0134</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Reviews Preview" style="background:oklch(94% 0.014 75);padding:72px clamp(20px,4vw,48px);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between;margin-bottom:36px;">
+        <div>
+          <div style="font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(55% 0.13 40);margin-bottom:12px;">Reputation</div>
+          <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(26px,2.8vw,34px);margin:0 0 8px;">What Customers Say</h2>
+          <div style="font-size:16px;font-weight:600;color:oklch(30% 0.015 255);">★★★★★ &nbsp;5.0 out of 5 — 24 Google reviews</div>
+        </div>
+        <a href="Reviews.dc.html" style="font-weight:600;font-size:15.5px;color:oklch(19% 0.03 250);border-bottom:1px solid oklch(19% 0.03 250);padding-bottom:2px;">Read all reviews</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:oklch(88% 0.012 75);">
+        <sc-for list="{{ reviews }}" as="rv" hint-placeholder-count="3">
+          <div style="background:oklch(98% 0.006 80);padding:28px;">
+            <div style="font-family:'Source Serif 4',serif;font-size:34px;color:oklch(80% 0.02 75);line-height:0.5;margin-bottom:10px;">"</div>
+            <p style="font-size:15.5px;line-height:1.6;color:oklch(26% 0.015 255);margin:0 0 16px;">{{ rv.quote }}</p>
+            <div style="font-weight:600;font-size:13.5px;color:oklch(46% 0.015 255);">{{ rv.name }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="CTA Band" style="background:oklch(19% 0.03 250);padding:64px clamp(20px,4vw,48px);text-align:center;">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(28px,3.2vw,38px);color:oklch(98% 0.006 80);margin:0 0 16px;">Septic Problem? We're On Call — Even Sundays.</h2>
+    <p style="font-size:18px;color:oklch(74% 0.015 250);margin:0 0 30px;">Same-day scheduling available. Call now or send a request online.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
+      <a href="tel:+13609560134" style="background:oklch(55% 0.13 40);color:white;font-weight:700;font-size:17px;padding:16px 30px;border-radius:3px;">(360) 956-0134</a>
+      <a href="Contact.dc.html" style="background:transparent;border:1px solid oklch(40% 0.02 250);color:oklch(94% 0.006 80);font-weight:600;font-size:17px;padding:15px 28px;border-radius:3px;">Request Service</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,300px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { submitted: false };
+  renderVals() {
+    return {
+      submitted: this.state.submitted,
+      handleSubmit: (e) => { e.preventDefault(); this.setState({ submitted: true }); },
+      heroStats: [
+        { value: '25+', label: 'Years in business' },
+        { value: '5.0★', label: 'Google rating' },
+        { value: '24/7', label: 'Emergency line' },
+      ],
+      trustItems: [
+        { value: '25+ Years', label: 'Serving WA since 2000' },
+        { value: '5.0 / 24 Reviews', label: 'Google customer rating' },
+        { value: 'Licensed & Insured', label: 'Washington State septic contractor' },
+        { value: '24-Hour', label: 'Emergency service, closed Saturdays' },
+      ],
+      services: [
+        { num: '01', title: 'Septic Pumping', desc: 'Routine and emergency tank pumping to keep your system running clean.', href: 'Service-Pumping.dc.html' },
+        { num: '02', title: 'Septic Inspections', desc: 'Real estate / OSS inspections for home sales, plus routine system checkups.', href: 'Service-Inspections.dc.html' },
+        { num: '03', title: 'Repair & Drain Field', desc: 'Diagnose and fix tanks, lines, risers and failing drain fields.', href: 'Service-Repair-Drainfield.dc.html' },
+        { num: '04', title: 'Installation', desc: 'New septic systems and full replacements, designed and permitted right.', href: 'Service-Installation.dc.html' },
+        { num: '05', title: 'Emergency Service', desc: '24-hour response for backups, alarms and overflowing systems.', href: 'Service-Emergency.dc.html' },
+        { num: '06', title: 'Service Areas', desc: 'Grays Harbor, Thurston, Mason & Lewis Counties — city by city.', href: 'Service-Areas.dc.html' },
+      ],
+      counties: ['Grays Harbor County', 'Thurston County', 'Mason County', 'Lewis County'],
+      reviews: [
+        { quote: 'Showed up on time, explained everything, and the price was fair. Exactly what you want from a septic company.', name: 'Google review — swap in real quote' },
+        { quote: 'Needed a real estate inspection fast to close on time. Ricky\u2019s team got it done in a day.', name: 'Google review — swap in real quote' },
+        { quote: 'Called on a Sunday with a backup and they actually picked up and came out. Lifesavers.', name: 'Google review — swap in real quote' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

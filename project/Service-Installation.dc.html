@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Septic system installation in Grays Harbor, Thurston, Mason & Lewis Counties, WA. New construction and full system replacements.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style id="__bolan_reset">*{box-sizing:border-box;}body{margin:0;background:oklch(97% 0.01 75);}a{text-decoration:none;color:inherit;}</style>
+</helmet>
+<div style="font-family:'Source Sans 3',sans-serif;color:oklch(16% 0.01 250);">
+  <dc-import name="Header" active-page="services" hint-size="100%,120px"></dc-import>
+
+  <section style="background:oklch(19% 0.03 250);padding:clamp(44px,5.5vw,72px) clamp(20px,4vw,48px);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="font-weight:600;font-size:14px;color:oklch(66% 0.015 250);margin-bottom:14px;"><a href="Services.dc.html" style="color:oklch(66% 0.015 250);">Services</a> &nbsp;/&nbsp; Installation</div>
+      <h1 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(30px,3.8vw,46px);color:oklch(98% 0.006 80);margin:0 0 16px;max-width:20ch;">New Septic System Installation</h1>
+      <p style="font-size:18px;color:oklch(76% 0.015 250);margin:0 0 26px;max-width:56ch;">Building new or replacing a failed system? We install septic systems sized and sited correctly for your property, coordinated with your county's permitting process.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;">
+        <a href="tel:+13609560134" style="background:oklch(55% 0.13 40);color:white;font-weight:700;font-size:16.5px;padding:15px 26px;border-radius:3px;">(360) 956-0134</a>
+        <a href="Contact.dc.html" style="background:transparent;border:1px solid oklch(40% 0.02 250);color:oklch(94% 0.006 80);font-weight:600;font-size:16.5px;padding:14px 24px;border-radius:3px;">Request Service</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:920px;margin:0 auto;padding:64px clamp(20px,4vw,48px);">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:28px;margin:0 0 20px;">When You Need a New System</h2>
+    <div style="display:flex;flex-direction:column;gap:0;margin-bottom:48px;">
+      <sc-for list="{{ cases }}" as="c" hint-placeholder-count="3">
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid oklch(88% 0.012 75);">
+          <span style="width:7px;height:7px;margin-top:8px;background:oklch(55% 0.13 40);flex-shrink:0;"></span>
+          <span style="font-size:15.5px;line-height:1.5;">{{ c }}</span>
+        </div>
+      </sc-for>
+    </div>
+
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:28px;margin:0 0 20px;">Our Installation Process</h2>
+    <div style="display:flex;flex-direction:column;gap:0;margin-bottom:48px;">
+      <sc-for list="{{ steps }}" as="step" hint-placeholder-count="5">
+        <div style="display:flex;gap:20px;padding:20px 0;border-bottom:1px solid oklch(88% 0.012 75);">
+          <div style="font-family:'Source Serif 4',serif;font-weight:700;font-size:22px;color:oklch(55% 0.13 40);min-width:34px;">{{ $index }}</div>
+          <div>
+            <div style="font-weight:700;font-size:17px;margin-bottom:5px;">{{ step.title }}</div>
+            <div style="font-size:15.5px;color:oklch(42% 0.015 255);line-height:1.6;">{{ step.desc }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="background:oklch(94% 0.014 75);border-radius:6px;padding:32px;">
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:22px;margin:0 0 12px;">Installations Across Southwest Washington</h2>
+      <p style="font-size:16px;line-height:1.7;color:oklch(30% 0.015 255);margin:0;">We install systems in Aberdeen, Hoquiam, Ocean Shores, Montesano and Elma in Grays Harbor County; Olympia, Lacey and Tumwater in Thurston County; Shelton in Mason County; and Centralia and Chehalis in Lewis County. <a href="Service-Areas.dc.html" style="color:oklch(19% 0.03 250);font-weight:700;border-bottom:1px solid oklch(19% 0.03 250);">See our full service area</a></p>
+    </div>
+  </section>
+
+  <section style="background:oklch(19% 0.03 250);padding:60px clamp(20px,4vw,48px);text-align:center;">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(26px,3vw,34px);color:oklch(98% 0.006 80);margin:0 0 24px;">Planning a New System? Let's Talk Through It.</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
+      <a href="tel:+13609560134" style="background:oklch(55% 0.13 40);color:white;font-weight:700;font-size:17px;padding:16px 30px;border-radius:3px;">(360) 956-0134</a>
+      <a href="Contact.dc.html" style="background:transparent;border:1px solid oklch(40% 0.02 250);color:oklch(94% 0.006 80);font-weight:600;font-size:17px;padding:15px 28px;border-radius:3px;">Request Service</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,300px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      cases: [
+        'Building new construction on unserved land',
+        'Your current system has failed beyond repair',
+        'Adding bedrooms or fixtures beyond your system\u2019s rated capacity',
+      ],
+      steps: [
+        { title: 'Site Evaluation', desc: 'We assess soil conditions, setbacks and layout options for your property.' },
+        { title: 'Design Coordination', desc: 'We work with a licensed designer to size and specify a system that fits your site and permit requirements.' },
+        { title: 'Permitting', desc: 'We help coordinate the county permit application so nothing holds up your project.' },
+        { title: 'Installation', desc: 'Our crew installs the tank, distribution system and drain field to spec.' },
+        { title: 'Final Inspection & Walkthrough', desc: 'We coordinate the county sign-off and walk you through operating your new system.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

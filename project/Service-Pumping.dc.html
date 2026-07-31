@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Septic tank pumping in Aberdeen, Hoquiam, Olympia & Grays Harbor / Thurston County, WA. Fast scheduling, fair pricing, family-owned since 2000.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style id="__bolan_reset">*{box-sizing:border-box;}body{margin:0;background:oklch(97% 0.01 75);}a{text-decoration:none;color:inherit;}</style>
+</helmet>
+<div style="font-family:'Source Sans 3',sans-serif;color:oklch(16% 0.01 250);">
+  <dc-import name="Header" active-page="services" hint-size="100%,120px"></dc-import>
+
+  <section style="background:oklch(19% 0.03 250);padding:clamp(44px,5.5vw,72px) clamp(20px,4vw,48px);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="font-weight:600;font-size:14px;color:oklch(66% 0.015 250);margin-bottom:14px;"><a href="Services.dc.html" style="color:oklch(66% 0.015 250);">Services</a> &nbsp;/&nbsp; Septic Pumping</div>
+      <h1 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(30px,3.8vw,46px);color:oklch(98% 0.006 80);margin:0 0 16px;">Septic Tank Pumping</h1>
+      <p style="font-size:18px;color:oklch(76% 0.015 250);margin:0 0 26px;max-width:52ch;">Fast, honest tank pumping across Grays Harbor, Thurston, Mason and Lewis Counties — routine maintenance or same-day emergency calls.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;">
+        <a href="tel:+13609560134" style="background:oklch(55% 0.13 40);color:white;font-weight:700;font-size:16.5px;padding:15px 26px;border-radius:3px;">(360) 956-0134</a>
+        <a href="Contact.dc.html" style="background:transparent;border:1px solid oklch(40% 0.02 250);color:oklch(94% 0.006 80);font-weight:600;font-size:16.5px;padding:14px 24px;border-radius:3px;">Request Service</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:920px;margin:0 auto;padding:64px clamp(20px,4vw,48px);">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:28px;margin:0 0 16px;">Why Regular Pumping Matters</h2>
+    <p style="font-size:17px;line-height:1.7;color:oklch(30% 0.015 255);margin:0 0 16px;">Most homes in Western Washington need their septic tank pumped every 3–5 years, depending on household size and tank capacity — sooner for larger families or older systems. Skipping pumping lets solids build up and migrate into your drain field, which is the single most common (and most expensive) way septic systems fail.</p>
+    <p style="font-size:17px;line-height:1.7;color:oklch(30% 0.015 255);margin:0 0 40px;">We pump, inspect the baffles and tees while we're there, and let you know if anything else needs attention — no upselling, no surprises.</p>
+
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:28px;margin:0 0 20px;">Signs Your Tank Needs Pumping</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 32px;margin-bottom:48px;">
+      <sc-for list="{{ signs }}" as="s" hint-placeholder-count="6">
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid oklch(88% 0.012 75);">
+          <span style="width:7px;height:7px;margin-top:8px;background:oklch(55% 0.13 40);flex-shrink:0;"></span>
+          <span style="font-size:15.5px;line-height:1.5;">{{ s }}</span>
+        </div>
+      </sc-for>
+    </div>
+
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:28px;margin:0 0 20px;">Our Pumping Process</h2>
+    <div style="display:flex;flex-direction:column;gap:0;margin-bottom:48px;">
+      <sc-for list="{{ steps }}" as="step" hint-placeholder-count="4">
+        <div style="display:flex;gap:20px;padding:20px 0;border-bottom:1px solid oklch(88% 0.012 75);">
+          <div style="font-family:'Source Serif 4',serif;font-weight:700;font-size:22px;color:oklch(55% 0.13 40);min-width:34px;">{{ $index }}</div>
+          <div>
+            <div style="font-weight:700;font-size:17px;margin-bottom:5px;">{{ step.title }}</div>
+            <div style="font-size:15.5px;color:oklch(42% 0.015 255);line-height:1.6;">{{ step.desc }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="background:oklch(94% 0.014 75);border-radius:6px;padding:32px;">
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:22px;margin:0 0 12px;">Pumping Service Across Southwest Washington</h2>
+      <p style="font-size:16px;line-height:1.7;color:oklch(30% 0.015 255);margin:0;">We regularly pump tanks in Aberdeen, Hoquiam, Ocean Shores, Montesano and Elma in Grays Harbor County; Olympia, Lacey and Tumwater in Thurston County; Shelton in Mason County; and Centralia and Chehalis in Lewis County. <a href="Service-Areas.dc.html" style="color:oklch(19% 0.03 250);font-weight:700;border-bottom:1px solid oklch(19% 0.03 250);">See our full service area</a></p>
+    </div>
+  </section>
+
+  <section style="background:oklch(19% 0.03 250);padding:60px clamp(20px,4vw,48px);text-align:center;">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:700;font-size:clamp(26px,3vw,34px);color:oklch(98% 0.006 80);margin:0 0 24px;">Due for a Pump-Out? Let's Get It Scheduled.</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
+      <a href="tel:+13609560134" style="background:oklch(55% 0.13 40);color:white;font-weight:700;font-size:17px;padding:16px 30px;border-radius:3px;">(360) 956-0134</a>
+      <a href="Contact.dc.html" style="background:transparent;border:1px solid oklch(40% 0.02 250);color:oklch(94% 0.006 80);font-weight:600;font-size:17px;padding:15px 28px;border-radius:3px;">Request Service</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,300px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      signs: [
+        'Slow drains or gurgling pipes',
+        'Standing water or soggy spots over the drain field',
+        'Sewage odor near the tank or yard',
+        'It has been 3–5+ years since the last pumping',
+        'Bright green, spongy grass over the drain field',
+        'Sewage backing up into the house',
+      ],
+      steps: [
+        { title: 'Locate & Uncover', desc: 'We locate the tank and access lids (or install risers if buried) so future service is easier.' },
+        { title: 'Pump & Clean', desc: 'We pump all chambers of the tank and remove sludge and scum layers completely.' },
+        { title: 'Inspect Components', desc: 'We check baffles, tees and the outlet filter for wear or damage while the tank is open.' },
+        { title: 'Report & Recommend', desc: 'You get a plain-language rundown of your system\u2019s condition and next recommended service date.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
