@@ -75,10 +75,10 @@ export default function HomePage() {
         <div className={styles.truckBandInner}>
           <div className={styles.truckImgCol}>
             <Image
-              src="/uploads/truck.png"
-              alt="Bolan Septic pump truck"
-              width={2528}
-              height={1686}
+              src="/uploads/truck-real.webp"
+              alt="Bolan Septic pump truck parked at the yard"
+              width={1782}
+              height={883}
               sizes="(max-width: 900px) 100vw, 600px"
               className={styles.truckImg}
             />

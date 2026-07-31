@@ -37,7 +37,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": "https://bolanseptic.com/#business",
   name: "Bolan Septic Service",
-  image: "https://bolanseptic.com/uploads/truck.png",
+  image: "https://bolanseptic.com/uploads/truck-real.webp",
   logo: "https://bolanseptic.com/uploads/logo.png",
   telephone: "+1-360-956-0134",
   email: "ricky.bolan@gmail.com",
