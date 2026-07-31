@@ -1,0 +1,420 @@
+.page {
+  font-family: var(--font-sans);
+  color: var(--color-ink-text);
+}
+
+/* Hero */
+.hero {
+  background: var(--color-ink);
+  padding: clamp(40px, 6vw, 76px) clamp(20px, 4vw, 48px) 64px;
+}
+
+.heroInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.heroCopy {
+  flex: 1 1 480px;
+  min-width: 280px;
+}
+
+.eyebrowOnDark {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-copper-soft);
+  margin-bottom: 18px;
+}
+
+.h1 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(34px, 4.6vw, 58px);
+  line-height: 1.06;
+  color: var(--color-on-dark-heading);
+  margin: 0 0 20px;
+  letter-spacing: -0.01em;
+}
+
+.heroLede {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--color-on-dark-body);
+  margin: 0 0 28px;
+  max-width: 52ch;
+}
+
+.heroCtas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 34px;
+}
+
+.btnCopper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-copper);
+  color: var(--color-btn-text);
+  font-weight: 700;
+  font-size: 17px;
+  padding: 16px 28px;
+  border-radius: 3px;
+}
+
+.btnOutlineOnDark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: 1px solid var(--color-on-dark-border);
+  color: var(--color-btn-outline-text);
+  font-weight: 600;
+  font-size: 17px;
+  padding: 15px 26px;
+  border-radius: 3px;
+}
+
+.heroStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.heroStat {
+  padding: 0 26px 0 0;
+  margin-right: 26px;
+  border-right: 1px solid var(--color-on-dark-divider);
+}
+
+.heroStatValue {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-on-dark-stat);
+}
+
+.heroStatLabel {
+  font-size: 13.5px;
+  color: var(--color-on-dark-muted);
+}
+
+/* Trust bar */
+.trustBar {
+  background: var(--color-paper-card);
+  border-bottom: 1px solid var(--color-border-soft);
+  padding: 30px clamp(20px, 4vw, 48px);
+}
+
+.trustBarInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.trustItem {
+  flex: 1 1 220px;
+  padding: 0 24px;
+  border-left: 1px solid var(--color-border-soft);
+}
+
+.trustValue {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--color-ink);
+}
+
+.trustLabel {
+  font-size: 14.5px;
+  color: var(--color-text-muted);
+}
+
+/* Section shared bits */
+.section {
+  padding: 72px clamp(20px, 4vw, 48px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionHead {
+  max-width: 640px;
+  margin: 0 0 44px;
+}
+
+.eyebrow {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-copper);
+  margin-bottom: 12px;
+}
+
+.h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(28px, 3.2vw, 38px);
+  margin: 0;
+}
+
+/* Services grid */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--color-border-soft);
+  border-left: 1px solid var(--color-border-soft);
+}
+
+.serviceCard {
+  display: block;
+  padding: 32px 28px;
+  border-right: 1px solid var(--color-border-soft);
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.serviceNum {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-copper);
+  margin-bottom: 16px;
+}
+
+.serviceTitle {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.serviceDesc {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  margin: 0 0 14px;
+  line-height: 1.55;
+}
+
+.learnMore {
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-ink);
+  padding-bottom: 2px;
+}
+
+/* Truck photo band */
+.truckBand {
+  background: var(--color-paper-muted);
+  padding: 72px clamp(20px, 4vw, 48px);
+}
+
+.truckBandInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  gap: 44px;
+  align-items: center;
+}
+
+.truckImgCol {
+  flex: 1 1 420px;
+}
+
+.truckImg {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+.truckCopyCol {
+  flex: 1 1 380px;
+  min-width: 280px;
+}
+
+.h2Tight {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(26px, 2.8vw, 34px);
+  margin: 0 0 16px;
+}
+
+.bodyText {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  margin: 0 0 20px;
+}
+
+.textLink {
+  font-weight: 600;
+  font-size: 15.5px;
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-ink);
+  padding-bottom: 2px;
+}
+
+/* Service area */
+.areaInner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.areaCopyCol {
+  flex: 1 1 380px;
+}
+
+.countyList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 24px;
+}
+
+.countyItem {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border-soft);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.areaCard {
+  flex: 1 1 320px;
+  min-width: 260px;
+  background: var(--color-ink);
+  border-radius: 6px;
+  padding: 36px;
+  color: white;
+}
+
+.areaCardEyebrow {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-on-dark-muted);
+  margin-bottom: 12px;
+}
+
+.areaCardLine1 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.areaCardLine2 {
+  font-size: 16px;
+  color: var(--color-on-dark-body);
+  margin-bottom: 24px;
+}
+
+.areaCardCall {
+  display: inline-block;
+  background: var(--color-copper);
+  color: white;
+  font-weight: 700;
+  padding: 13px 22px;
+  border-radius: 3px;
+}
+
+/* Reviews */
+.reviewsBand {
+  background: var(--color-paper-muted);
+  padding: 72px clamp(20px, 4vw, 48px);
+}
+
+.reviewsInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reviewsHead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.reviewsRating {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--color-border-soft);
+}
+
+.reviewCard {
+  background: var(--color-paper-card);
+  padding: 28px;
+}
+
+.quoteMark {
+  font-family: var(--font-serif);
+  font-size: 34px;
+  color: var(--color-quote-mark);
+  line-height: 0.5;
+  margin-bottom: 10px;
+}
+
+.quoteText {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--color-quote-text);
+  margin: 0 0 16px;
+}
+
+.quoteName {
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--color-quote-name);
+}
+
+/* CTA band */
+.ctaBand {
+  background: var(--color-ink);
+  padding: 64px clamp(20px, 4vw, 48px);
+  text-align: center;
+}
+
+.ctaHeading {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(28px, 3.2vw, 38px);
+  color: var(--color-on-dark-heading);
+  margin: 0 0 16px;
+}
+
+.ctaBody {
+  font-size: 18px;
+  color: var(--color-on-dark-body);
+  margin: 0 0 30px;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
