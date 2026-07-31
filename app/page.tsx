@@ -12,6 +12,15 @@ export default function HomePage() {
       <Header activePage="home" />
 
       <section aria-label="Hero" className={styles.hero}>
+        <Image
+          src="/uploads/truck-real.webp"
+          alt="Bolan Septic pump truck parked at the yard"
+          fill
+          sizes="100vw"
+          priority
+          className={styles.heroBgImg}
+        />
+        <div className={styles.heroOverlay} />
         <div className={styles.heroInner}>
           <div className={styles.heroCopy}>
             <div className={styles.eyebrowOnDark}>Family-Owned in Aberdeen, WA — Since 2000</div>
@@ -36,18 +45,6 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-          </div>
-
-          <div className={styles.heroPhoto}>
-            <Image
-              src="/uploads/truck-real.webp"
-              alt="Bolan Septic pump truck parked at the yard"
-              width={1782}
-              height={883}
-              sizes="(max-width: 900px) 100vw, 560px"
-              className={styles.heroPhotoImg}
-              priority
-            />
           </div>
         </div>
       </section>
