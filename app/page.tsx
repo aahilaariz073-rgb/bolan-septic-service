@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { WHY_CHOOSE_ICONS } from "@/components/FeatureIcons";
 import { routes, business } from "@/lib/routes";
-import { heroStats, trustItems, services, counties, reviews } from "@/lib/home-data";
+import { heroStats, trustItems, services, counties, reviews, whyChooseUs } from "@/lib/home-data";
 import styles from "./page.module.css";
 
 export default function HomePage() {
@@ -57,6 +58,26 @@ export default function HomePage() {
               <div className={styles.trustLabel}>{t.label}</div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section aria-label="Why choose Bolan Septic" className={styles.whyBand}>
+        <div className={styles.whyInner}>
+          <h2 className={styles.whyHeading}>From Maintenance to Emergency, We&apos;ve Got It</h2>
+          <div className={styles.whyGrid}>
+            {whyChooseUs.map((item) => {
+              const Icon = WHY_CHOOSE_ICONS[item.icon];
+              return (
+                <div key={item.title} className={styles.whyCard}>
+                  <div className={styles.whyIcon}>
+                    <Icon />
+                  </div>
+                  <div className={styles.whyTitle}>{item.title}</div>
+                  <p className={styles.whyDesc}>{item.desc}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 

@@ -171,6 +171,65 @@
   color: var(--color-text-muted);
 }
 
+/* Why choose us */
+.whyBand {
+  padding: 72px clamp(20px, 4vw, 48px) 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.whyInner {
+  text-align: center;
+}
+
+.whyHeading {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(28px, 3.2vw, 38px);
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  text-align: left;
+}
+
+.whyCard {
+  background: var(--color-ink);
+  border-radius: 8px;
+  padding: 32px 28px;
+}
+
+.whyIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-copper);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.whyTitle {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-on-dark-heading);
+  margin-bottom: 8px;
+}
+
+.whyDesc {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--color-on-dark-body);
+  margin: 0;
+}
+
 /* Section shared bits */
 .section {
   padding: 72px clamp(20px, 4vw, 48px);

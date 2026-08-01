@@ -52,6 +52,24 @@ export const services = [
   },
 ];
 
+export const whyChooseUs: { icon: "clock" | "shield" | "checklist"; title: string; desc: string }[] = [
+  {
+    icon: "clock",
+    title: "Rapid Response Promise",
+    desc: "Fast, reliable help when septic issues can't wait.",
+  },
+  {
+    icon: "shield",
+    title: "Trusted Local Expertise",
+    desc: "25+ years of real-world experience delivering dependable septic solutions.",
+  },
+  {
+    icon: "checklist",
+    title: "Complete System Care",
+    desc: "From inspection to repair, we handle it all end-to-end.",
+  },
+];
+
 export const counties = ["Grays Harbor County", "Thurston County", "Mason County", "Lewis County"];
 
 export const reviews = [
