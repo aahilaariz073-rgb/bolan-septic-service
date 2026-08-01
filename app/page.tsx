@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { WHY_CHOOSE_ICONS } from "@/components/FeatureIcons";
 import { routes, business } from "@/lib/routes";
-import { heroStats, trustItems, services, counties, reviews, whyChooseUs } from "@/lib/home-data";
+import { heroStats, trustItems, serviceShowcase, counties, reviews, whyChooseUs } from "@/lib/home-data";
 import styles from "./page.module.css";
 
 export default function HomePage() {
@@ -81,21 +81,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-label="Services overview" className={styles.section}>
+      <section aria-label="Services overview" className={`${styles.section} ${styles.sectionTight}`}>
         <div className={styles.sectionHead}>
           <div className={styles.eyebrow}>What We Do</div>
           <h2 className={styles.h2}>Full-Service Septic Care</h2>
         </div>
-        <div className={styles.servicesGrid}>
-          {services.map((svc) => (
-            <Link key={svc.title} href={svc.href} className={styles.serviceCard}>
-              <div className={styles.serviceNum}>{svc.num}</div>
-              <div className={styles.serviceTitle}>{svc.title}</div>
-              <p className={styles.serviceDesc}>{svc.desc}</p>
-              <span className={styles.learnMore}>Learn more</span>
-            </Link>
-          ))}
-        </div>
+      </section>
+
+      <section aria-label="Service showcase">
+        {serviceShowcase.map((svc, i) => (
+          <div key={svc.title} className={styles.serviceRow}>
+            <div className={`${styles.serviceRowPhoto} ${i % 2 === 1 ? styles.serviceRowPhotoSecond : ""}`}>
+              <div className={styles.photoPlaceholder}>
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="1.5" />
+                  <circle cx="8.5" cy="10" r="1.5" />
+                  <path d="M21 16l-5.5-5.5L9 17" />
+                </svg>
+                <span className={styles.photoPlaceholderLabel}>Photo needed</span>
+                <span className={styles.photoPlaceholderHint}>{svc.title}</span>
+              </div>
+            </div>
+            <div className={styles.serviceRowText}>
+              <h3 className={styles.serviceRowTitle}>{svc.title}</h3>
+              <p className={styles.serviceRowDesc}>{svc.longDesc}</p>
+              <Link href={svc.href} className={styles.serviceRowCta}>
+                Learn More
+              </Link>
+            </div>
+          </div>
+        ))}
       </section>
 
       <section aria-label="Local and family-run" className={styles.truckBand}>
