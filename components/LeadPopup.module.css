@@ -1,0 +1,152 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: oklch(10% 0.02 240 / 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: var(--color-paper-card);
+  border-radius: 10px;
+  box-shadow: 0 32px 64px oklch(10% 0.03 240 / 0.4);
+  padding: 34px 30px 30px;
+  animation: popIn 0.25s ease;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-paper-muted);
+  color: var(--color-text-muted);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eyebrow {
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-copper);
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0 0 8px;
+  color: var(--color-ink-text);
+}
+
+.subtitle {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text-soft);
+  margin: 0 0 22px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field {
+  padding: 13px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--color-input-border);
+  font-size: 16px;
+  color: var(--color-ink-text);
+  background: #fff;
+}
+
+.submit {
+  margin-top: 4px;
+  background: var(--color-copper);
+  color: var(--color-btn-text);
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  opacity: 0.92;
+}
+
+.disclaimer {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin: 12px 0 0;
+}
+
+.success {
+  text-align: center;
+  padding: 12px 0 4px;
+}
+
+.successIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-copper);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.successTitle {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+
+.successBody {
+  font-size: 15.5px;
+  color: var(--color-text-soft);
+  margin: 0;
+}

@@ -2,18 +2,8 @@
 
 import { useState } from "react";
 import { business } from "@/lib/routes";
+import { SERVICE_OPTIONS, URGENCY_OPTIONS } from "@/lib/lead-options";
 import styles from "./RequestServiceForm.module.css";
-
-const SERVICES_NEEDED = [
-  "Septic Pumping",
-  "Septic Inspection (Real Estate/OSS)",
-  "Repair / Drain Field",
-  "New Installation",
-  "Emergency — System Backed Up",
-  "Not Sure",
-];
-
-const URGENCY = ["Emergency — need help today", "This week", "Just planning ahead"];
 
 export default function RequestServiceForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -59,7 +49,7 @@ export default function RequestServiceForm() {
                 <option value="" disabled>
                   Select a service
                 </option>
-                {SERVICES_NEEDED.map((s) => (
+                {SERVICE_OPTIONS.map((s) => (
                   <option key={s}>{s}</option>
                 ))}
               </select>
@@ -70,7 +60,7 @@ export default function RequestServiceForm() {
                 <option value="" disabled>
                   How urgent is this?
                 </option>
-                {URGENCY.map((u) => (
+                {URGENCY_OPTIONS.map((u) => (
                   <option key={u}>{u}</option>
                 ))}
               </select>

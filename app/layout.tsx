@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Source_Serif_4, Source_Sans_3 } from "next/font/google";
+import LeadPopup from "@/components/LeadPopup";
+import ChatWidget from "@/components/ChatWidget";
 import "./globals.css";
 
 const sourceSerif = Source_Serif_4({
@@ -99,7 +101,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <LeadPopup />
+        <ChatWidget />
+      </body>
     </html>
   );
 }
