@@ -61,6 +61,67 @@
   border-bottom-color: var(--color-copper);
 }
 
+.navDropdownWrap {
+  position: relative;
+}
+
+.navDropdownTrigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navDropdownTrigger svg {
+  transition: transform 0.15s ease;
+}
+
+.navDropdownWrap:hover .navDropdownTrigger svg,
+.navDropdownWrap:focus-within .navDropdownTrigger svg {
+  transform: rotate(180deg);
+}
+
+.navDropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 6px);
+  min-width: 220px;
+  background: var(--color-paper-card);
+  border: 1px solid var(--color-border-soft);
+  border-radius: 6px;
+  box-shadow: 0 16px 32px var(--color-shadow);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.navDropdownWrap:hover .navDropdown,
+.navDropdownWrap:focus-within .navDropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 10px);
+}
+
+.navDropdownLink {
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--color-ink-text);
+  padding: 10px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.navDropdownLink:hover {
+  background: var(--color-paper-muted);
+  color: var(--color-copper);
+}
+
 .desktopCta {
   display: none;
   align-items: center;
@@ -170,6 +231,55 @@
 
 .mobileNavLinkActive {
   color: var(--color-copper);
+}
+
+.mobileNavGroup {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobileNavRow {
+  display: flex;
+  align-items: center;
+}
+
+.mobileNavRow .mobileNavLink {
+  flex: 1;
+  border-bottom: none;
+}
+
+.mobileSubmenuToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.mobileSubmenuToggle svg {
+  transition: transform 0.15s ease;
+}
+
+.mobileSubmenuIconOpen {
+  transform: rotate(180deg);
+}
+
+.mobileSubmenu {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4px 16px 20px;
+  gap: 2px;
+}
+
+.mobileSubmenuLink {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--color-text-secondary);
+  padding: 10px 4px;
 }
 
 .mobileMenuFooter {

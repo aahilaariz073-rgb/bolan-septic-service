@@ -8,9 +8,17 @@ import styles from "./Header.module.css";
 
 type PageKey = "home" | "services" | "areas" | "about" | "reviews" | "contact";
 
-const NAV_ITEMS: { key: PageKey; label: string; href: string }[] = [
+const SERVICE_LINKS = [
+  { label: "Septic Pumping", href: routes.servicePumping },
+  { label: "Septic Inspections", href: routes.serviceInspections },
+  { label: "Repair & Drain Field", href: routes.serviceRepairDrainfield },
+  { label: "Installation", href: routes.serviceInstallation },
+  { label: "Emergency Service", href: routes.serviceEmergency },
+];
+
+const NAV_ITEMS: { key: PageKey; label: string; href: string; children?: typeof SERVICE_LINKS }[] = [
   { key: "home", label: "Home", href: routes.home },
-  { key: "services", label: "Services", href: routes.services },
+  { key: "services", label: "Services", href: routes.services, children: SERVICE_LINKS },
   { key: "areas", label: "Service Areas", href: routes.serviceAreas },
   { key: "about", label: "About", href: routes.about },
   { key: "reviews", label: "Reviews", href: routes.reviews },
@@ -19,6 +27,12 @@ const NAV_ITEMS: { key: PageKey; label: string; href: string }[] = [
 
 export default function Header({ activePage }: { activePage: PageKey }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState(false);
+
+  const closeMobileMenu = () => {
+    setMenuOpen(false);
+    setOpenSubmenu(false);
+  };
 
   return (
     <header className={styles.wrap}>
@@ -41,15 +55,38 @@ export default function Header({ activePage }: { activePage: PageKey }) {
         </Link>
 
         <nav className={styles.nav}>
-          {NAV_ITEMS.map((item) => (
-            <Link
-              key={item.key}
-              href={item.href}
-              className={`${styles.navLink} ${item.key === activePage ? styles.navLinkActive : ""}`}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {NAV_ITEMS.map((item) =>
+            item.children ? (
+              <div key={item.key} className={styles.navDropdownWrap}>
+                <Link
+                  href={item.href}
+                  className={`${styles.navLink} ${styles.navDropdownTrigger} ${
+                    item.key === activePage ? styles.navLinkActive : ""
+                  }`}
+                >
+                  {item.label}
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                    <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </Link>
+                <div className={styles.navDropdown}>
+                  {item.children.map((child) => (
+                    <Link key={child.href} href={child.href} className={styles.navDropdownLink}>
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={item.key}
+                href={item.href}
+                className={`${styles.navLink} ${item.key === activePage ? styles.navLinkActive : ""}`}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </nav>
 
         <div className={styles.desktopCta}>
@@ -67,7 +104,7 @@ export default function Header({ activePage }: { activePage: PageKey }) {
           </a>
           <button
             type="button"
-            onClick={() => setMenuOpen((v) => !v)}
+            onClick={() => (menuOpen ? closeMobileMenu() : setMenuOpen(true))}
             aria-label="Menu"
             aria-expanded={menuOpen}
             className={styles.menuBtn}
@@ -81,27 +118,73 @@ export default function Header({ activePage }: { activePage: PageKey }) {
         <div className={styles.mobileMenu}>
           <div className={styles.mobileMenuHeader}>
             <Image src="/uploads/logo.png" alt="Bolan Septic" width={167} height={83} className={styles.mobileMenuLogo} />
-            <button type="button" onClick={() => setMenuOpen(false)} aria-label="Close menu" className={styles.closeBtn}>
+            <button type="button" onClick={closeMobileMenu} aria-label="Close menu" className={styles.closeBtn}>
               ✕
             </button>
           </div>
           <nav className={styles.mobileNav}>
-            {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.key}
-                href={item.href}
-                onClick={() => setMenuOpen(false)}
-                className={`${styles.mobileNavLink} ${item.key === activePage ? styles.mobileNavLinkActive : ""}`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {NAV_ITEMS.map((item) =>
+              item.children ? (
+                <div key={item.key} className={styles.mobileNavGroup}>
+                  <div className={styles.mobileNavRow}>
+                    <Link
+                      href={item.href}
+                      onClick={closeMobileMenu}
+                      className={`${styles.mobileNavLink} ${item.key === activePage ? styles.mobileNavLinkActive : ""}`}
+                    >
+                      {item.label}
+                    </Link>
+                    <button
+                      type="button"
+                      onClick={() => setOpenSubmenu((v) => !v)}
+                      aria-label={openSubmenu ? "Collapse services" : "Expand services"}
+                      aria-expanded={openSubmenu}
+                      className={styles.mobileSubmenuToggle}
+                    >
+                      <svg
+                        width="14"
+                        height="8"
+                        viewBox="0 0 10 6"
+                        fill="none"
+                        aria-hidden="true"
+                        className={openSubmenu ? styles.mobileSubmenuIconOpen : ""}
+                      >
+                        <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  {openSubmenu && (
+                    <div className={styles.mobileSubmenu}>
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={closeMobileMenu}
+                          className={styles.mobileSubmenuLink}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={item.key}
+                  href={item.href}
+                  onClick={closeMobileMenu}
+                  className={`${styles.mobileNavLink} ${item.key === activePage ? styles.mobileNavLinkActive : ""}`}
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
           </nav>
           <div className={styles.mobileMenuFooter}>
             <a href={business.phoneHref} className={styles.mobileMenuCallBtn}>
               Call {business.phone}
             </a>
-            <Link href={routes.contact} onClick={() => setMenuOpen(false)} className={styles.mobileMenuRequestBtn}>
+            <Link href={routes.contact} onClick={closeMobileMenu} className={styles.mobileMenuRequestBtn}>
               Request Service
             </Link>
           </div>
