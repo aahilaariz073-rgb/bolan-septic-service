@@ -8,7 +8,6 @@ export default function PageHero({
   title,
   description,
   align = "center",
-  breadcrumb,
   ctas,
   deep = false,
 }: {
@@ -16,21 +15,12 @@ export default function PageHero({
   title: string;
   description?: string;
   align?: "center" | "left";
-  breadcrumb?: { label: string; href: string; current: string };
   ctas?: Cta[];
   deep?: boolean;
 }) {
   return (
     <section className={deep ? styles.heroDeep : styles.hero}>
       <div className={`${styles.inner} ${align === "center" ? styles.center : ""} ${ctas ? styles.hasCtas : ""}`}>
-        {breadcrumb && (
-          <div className={styles.breadcrumb}>
-            <Link href={breadcrumb.href} className={styles.breadcrumbLink}>
-              {breadcrumb.label}
-            </Link>
-            &nbsp;/&nbsp;{breadcrumb.current}
-          </div>
-        )}
         <div className={styles.eyebrow}>{eyebrow}</div>
         <h1 className={styles.title}>{title}</h1>
         {description && <p className={styles.description}>{description}</p>}

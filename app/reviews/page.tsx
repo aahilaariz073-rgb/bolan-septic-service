@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
-import { business } from "@/lib/routes";
+import { business, routes } from "@/lib/routes";
 import { allReviews } from "@/lib/reviews-data";
 import styles from "./page.module.css";
 
@@ -17,6 +18,7 @@ export default function ReviewsPage() {
   return (
     <div>
       <Header activePage="reviews" />
+      <Breadcrumbs items={[{ label: "Home", href: routes.home }, { label: "Reviews" }]} />
       <PageHero eyebrow="Reviews" title="What Our Customers Say" description="★★★★★  5.0 out of 5 — 25 Google Reviews" />
 
       <div className={styles.content}>

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
 import FaqAccordion from "@/components/FaqAccordion";
 import { faqs } from "@/lib/faq-data";
+import { routes } from "@/lib/routes";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -32,6 +34,7 @@ export default function FaqPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Header activePage="faq" />
+      <Breadcrumbs items={[{ label: "Home", href: routes.home }, { label: "FAQ" }]} />
       <PageHero
         eyebrow="FAQ"
         title="Septic Questions, Answered Straight"

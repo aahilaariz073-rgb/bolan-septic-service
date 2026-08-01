@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import { galleryPhotos, galleryPlaceholders } from "@/lib/gallery-data";
+import { routes } from "@/lib/routes";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -18,6 +20,7 @@ export default function GalleryPage() {
   return (
     <div>
       <Header activePage="gallery" />
+      <Breadcrumbs items={[{ label: "Home", href: routes.home }, { label: "Gallery" }]} />
       <PageHero
         eyebrow="Gallery"
         title="A Look at the Work"

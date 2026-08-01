@@ -18,17 +18,6 @@
   max-width: 760px;
 }
 
-.breadcrumb {
-  font-weight: 600;
-  font-size: 14px;
-  color: var(--color-on-dark-muted);
-  margin-bottom: 14px;
-}
-
-.breadcrumbLink {
-  color: var(--color-on-dark-muted);
-}
-
 .eyebrow {
   font-weight: 700;
   font-size: 13px;

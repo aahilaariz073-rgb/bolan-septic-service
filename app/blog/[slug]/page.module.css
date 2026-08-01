@@ -26,7 +26,21 @@
   font-weight: 700;
   font-size: clamp(28px, 3.6vw, 40px);
   line-height: 1.15;
-  margin: 0 0 32px;
+  margin: 0 0 28px;
+}
+
+.coverWrap {
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 36px;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .footerCta {

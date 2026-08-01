@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBand from "@/components/CtaBand";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import { values, credentials } from "@/lib/about-data";
+import { routes } from "@/lib/routes";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -15,6 +17,7 @@ export default function AboutPage() {
   return (
     <div>
       <Header activePage="about" />
+      <Breadcrumbs items={[{ label: "Home", href: routes.home }, { label: "About" }]} />
 
       <section className={styles.bio}>
         <div className={styles.bioInner}>

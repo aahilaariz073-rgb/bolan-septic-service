@@ -32,6 +32,14 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://bolanseptic.com/#website",
+  name: "Bolan Septic Service",
+  url: "https://bolanseptic.com",
+};
+
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -80,6 +88,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${sourceSerif.variable} ${sourceSans.variable}`}>
       <head>
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger

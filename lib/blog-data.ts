@@ -7,6 +7,7 @@ export type BlogPost = {
   description: string;
   date: string;
   dateLabel: string;
+  coverImage: { src: string; alt: string; width: number; height: number };
   body: BlogBlock[];
 };
 
@@ -20,6 +21,12 @@ export const blogPosts: BlogPost[] = [
       "How often to pump a septic tank in Washington, what actually determines the interval, and the warning signs that mean you're overdue.",
     date: "2026-03-10",
     dateLabel: "March 10, 2026",
+    coverImage: {
+      src: "/uploads/services/svc-3-hose-riser.webp",
+      alt: "Technician feeding a pump hose into a septic tank riser",
+      width: 1538,
+      height: 1023,
+    },
     body: [
       {
         type: "p",
@@ -73,6 +80,12 @@ export const blogPosts: BlogPost[] = [
       "The five most common warning signs a septic system needs repair, from slow drains to a failing drain field, and what to do about them.",
     date: "2026-04-02",
     dateLabel: "April 2, 2026",
+    coverImage: {
+      src: "/uploads/services/svc-4-trench-excavator.webp",
+      alt: "Excavator laying new drain field piping in a trench",
+      width: 1500,
+      height: 2000,
+    },
     body: [
       {
         type: "p",
@@ -118,6 +131,12 @@ export const blogPosts: BlogPost[] = [
       "What a Washington OSS (on-site sewage) inspection covers, why county requirements for home sales vary, and how to plan around it before closing.",
     date: "2026-05-14",
     dateLabel: "May 14, 2026",
+    coverImage: {
+      src: "/uploads/services/svc-5-manhole-open.webp",
+      alt: "Technician opening a septic tank access lid for inspection",
+      width: 1200,
+      height: 800,
+    },
     body: [
       {
         type: "p",
@@ -164,6 +183,12 @@ export const blogPosts: BlogPost[] = [
       "What Washington's new statewide septic inspection requirement — taking effect February 1, 2027 — means for homeowners planning to sell a septic-served property.",
     date: "2026-07-08",
     dateLabel: "July 8, 2026",
+    coverImage: {
+      src: "/uploads/services/svc-2-tanks-hole.webp",
+      alt: "New septic tanks set in the ground before backfilling",
+      width: 1471,
+      height: 1069,
+    },
     body: [
       {
         type: "p",
@@ -204,6 +229,12 @@ export const blogPosts: BlogPost[] = [
       "A practical do's and don'ts guide to septic system care — what to flush, what to avoid, and how to protect your drain field, based on EPA guidance.",
     date: "2026-07-25",
     dateLabel: "July 25, 2026",
+    coverImage: {
+      src: "/uploads/truck-real.webp",
+      alt: "Bolan Septic pump truck parked at the yard",
+      width: 1782,
+      height: 883,
+    },
     body: [
       {
         type: "p",

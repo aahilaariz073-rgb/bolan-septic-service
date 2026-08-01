@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
 import { blogPosts } from "@/lib/blog-data";
@@ -20,6 +22,7 @@ export default function BlogIndexPage() {
   return (
     <div>
       <Header activePage="blog" />
+      <Breadcrumbs items={[{ label: "Home", href: routes.home }, { label: "Blog" }]} />
       <PageHero
         eyebrow="Blog"
         title="Septic Tips & Local Guidance"
@@ -28,10 +31,22 @@ export default function BlogIndexPage() {
       <div className={styles.content}>
         {sorted.map((post) => (
           <Link key={post.slug} href={`${routes.blog}/${post.slug}`} className={styles.card}>
-            <div className={styles.date}>{post.dateLabel}</div>
-            <h2 className={styles.title}>{post.title}</h2>
-            <p className={styles.excerpt}>{post.excerpt}</p>
-            <span className={styles.readMore}>Read more</span>
+            <div className={styles.thumbWrap}>
+              <Image
+                src={post.coverImage.src}
+                alt={post.coverImage.alt}
+                width={post.coverImage.width}
+                height={post.coverImage.height}
+                sizes="240px"
+                className={styles.thumb}
+              />
+            </div>
+            <div className={styles.textCol}>
+              <div className={styles.date}>{post.dateLabel}</div>
+              <h2 className={styles.title}>{post.title}</h2>
+              <p className={styles.excerpt}>{post.excerpt}</p>
+              <span className={styles.readMore}>Read more</span>
+            </div>
           </Link>
         ))}
       </div>

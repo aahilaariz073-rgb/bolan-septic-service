@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHero from "@/components/PageHero";
 import RequestServiceForm from "@/components/RequestServiceForm";
-import { business } from "@/lib/routes";
+import { business, routes } from "@/lib/routes";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function ContactPage() {
   return (
     <div>
       <Header activePage="contact" />
+      <Breadcrumbs items={[{ label: "Home", href: routes.home }, { label: "Contact" }]} />
       <PageHero
         eyebrow="Contact Us"
         title="Request Service"

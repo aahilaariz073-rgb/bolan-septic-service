@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
 import Checklist from "@/components/Checklist";
 import NumberedList from "@/components/NumberedList";
 import ServiceAreaNote from "@/components/ServiceAreaNote";
-import { business } from "@/lib/routes";
+import { business, routes } from "@/lib/routes";
 import { emergency } from "@/lib/services-data";
+import { serviceSchema } from "@/lib/service-schema";
 import styles from "@/components/ServiceDetail.module.css";
 
 export const metadata: Metadata = {
@@ -16,10 +18,28 @@ export const metadata: Metadata = {
     "24-hour emergency septic service in Grays Harbor, Thurston, Mason & Lewis Counties, WA. Backups, alarms and overflows — call (360) 956-0134.",
 };
 
+const schema = serviceSchema({
+  name: "Emergency Septic Service",
+  description: emergency.description,
+  url: routes.serviceEmergency,
+});
+
 export default function EmergencyPage() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <Header activePage="services" />
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: routes.home },
+          { label: "Services", href: routes.services },
+          { label: "Emergency Service" },
+        ]}
+      />
       <PageHero
         eyebrow="24-Hour Emergency Line — Closed Saturdays"
         title={emergency.title}

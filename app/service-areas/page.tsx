@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
-import { business } from "@/lib/routes";
+import { business, routes } from "@/lib/routes";
 import { counties } from "@/lib/areas-data";
 import styles from "./page.module.css";
 
@@ -17,6 +18,7 @@ export default function ServiceAreasPage() {
   return (
     <div>
       <Header activePage="areas" />
+      <Breadcrumbs items={[{ label: "Home", href: routes.home }, { label: "Service Areas" }]} />
       <PageHero
         eyebrow="Service Areas"
         title="Serving Southwest Washington, Within 50 Miles of Aberdeen"
