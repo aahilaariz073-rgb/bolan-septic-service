@@ -72,6 +72,6 @@
 }
 
 .successPhone {
-  color: oklch(42% 0.09 250);
+  color: var(--color-copper);
   font-weight: 700;
 }

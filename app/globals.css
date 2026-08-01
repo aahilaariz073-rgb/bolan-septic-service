@@ -1,47 +1,48 @@
 :root {
-  --color-ink: oklch(19% 0.03 250);
-  --color-ink-text: oklch(16% 0.01 250);
+  /* Brand blue lifted directly from the Bolan Septic logo (#1078B0) */
+  --color-ink: oklch(19% 0.05 240);
+  --color-ink-text: oklch(15% 0.015 240);
 
-  --color-paper: oklch(97% 0.01 75);
-  --color-paper-card: oklch(98% 0.006 80);
-  --color-paper-muted: oklch(94% 0.014 75);
+  --color-paper: oklch(97% 0.006 235);
+  --color-paper-card: oklch(99% 0.003 235);
+  --color-paper-muted: oklch(94% 0.01 235);
 
-  --color-border: oklch(88% 0.012 75);
-  --color-border-soft: oklch(86% 0.012 75);
-  --color-input-border: oklch(82% 0.012 75);
+  --color-border: oklch(88% 0.01 235);
+  --color-border-soft: oklch(86% 0.01 235);
+  --color-input-border: oklch(82% 0.01 235);
 
-  --color-copper: oklch(55% 0.13 40);
-  --color-copper-soft: oklch(64% 0.11 45);
+  --color-copper: oklch(55% 0.12 240);
+  --color-copper-soft: oklch(72% 0.09 235);
 
-  --color-on-dark-heading: oklch(98% 0.006 80);
-  --color-on-dark-body: oklch(76% 0.015 250);
-  --color-on-dark-muted: oklch(66% 0.015 250);
-  --color-on-dark-stat: oklch(96% 0.006 80);
-  --color-on-dark-border: oklch(40% 0.02 250);
-  --color-on-dark-divider: oklch(32% 0.02 250);
+  --color-on-dark-heading: oklch(98% 0.004 235);
+  --color-on-dark-body: oklch(76% 0.02 240);
+  --color-on-dark-muted: oklch(66% 0.02 240);
+  --color-on-dark-stat: oklch(96% 0.004 235);
+  --color-on-dark-border: oklch(40% 0.03 240);
+  --color-on-dark-divider: oklch(32% 0.03 240);
 
-  --color-btn-text: oklch(99% 0.005 80);
-  --color-btn-outline-text: oklch(94% 0.006 80);
+  --color-btn-text: oklch(99% 0.003 235);
+  --color-btn-outline-text: oklch(94% 0.004 235);
 
-  --color-text-muted: oklch(42% 0.015 255);
-  --color-text-secondary: oklch(30% 0.015 255);
-  --color-text-soft: oklch(40% 0.015 255);
+  --color-text-muted: oklch(42% 0.02 240);
+  --color-text-secondary: oklch(30% 0.02 240);
+  --color-text-soft: oklch(40% 0.02 240);
 
-  --color-quote-text: oklch(26% 0.015 255);
-  --color-quote-name: oklch(46% 0.015 255);
-  --color-quote-mark: oklch(80% 0.02 75);
+  --color-quote-text: oklch(26% 0.02 240);
+  --color-quote-name: oklch(46% 0.02 240);
+  --color-quote-mark: oklch(80% 0.03 235);
 
-  --color-shadow: oklch(10% 0.02 250 / 0.3);
+  --color-shadow: oklch(10% 0.03 240 / 0.3);
 
-  --color-topbar-text: oklch(78% 0.015 250);
+  --color-topbar-text: oklch(78% 0.02 240);
 
-  --color-footer-bg: oklch(16% 0.025 250);
-  --color-footer-text: oklch(78% 0.012 250);
-  --color-footer-heading: oklch(94% 0.005 80);
-  --color-footer-muted: oklch(70% 0.012 250);
-  --color-footer-faint: oklch(60% 0.012 250);
-  --color-footer-border: oklch(28% 0.025 250);
-  --color-footer-copyright: oklch(55% 0.012 250);
+  --color-footer-bg: oklch(15% 0.04 240);
+  --color-footer-text: oklch(78% 0.015 240);
+  --color-footer-heading: oklch(94% 0.005 235);
+  --color-footer-muted: oklch(70% 0.015 240);
+  --color-footer-faint: oklch(60% 0.015 240);
+  --color-footer-border: oklch(28% 0.035 240);
+  --color-footer-copyright: oklch(55% 0.015 240);
 }
 
 * {
