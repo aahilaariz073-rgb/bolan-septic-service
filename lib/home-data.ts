@@ -38,7 +38,7 @@ export const reviews = [
     name: "Google review — swap in real quote",
   },
   {
-    quote: "Needed a real estate inspection fast to close on time. Ricky’s team got it done in a day.",
+    quote: "Needed a real estate inspection fast to close on time. Rick’s team got it done in a day.",
     name: "Google review — swap in real quote",
   },
   {

@@ -107,7 +107,7 @@ export default function HomePage() {
             <div className={styles.eyebrow}>Local &amp; Family-Run</div>
             <h2 className={styles.h2Tight}>One Call. One Crew You Can Trust.</h2>
             <p className={styles.bodyText}>
-              Ricky Bolan has run this company since 2000 — no call centers, no subcontractors. When you call Bolan
+              Rick Bolan has run this company since 2000 — no call centers, no subcontractors. When you call Bolan
               Septic, you get a real local crew that shows up on time and explains exactly what your system needs.
             </p>
             <Link href={routes.about} className={styles.textLink}>
