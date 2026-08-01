@@ -6,7 +6,7 @@ import Link from "next/link";
 import { routes, business } from "@/lib/routes";
 import styles from "./Header.module.css";
 
-type PageKey = "home" | "services" | "areas" | "about" | "reviews" | "contact";
+type PageKey = "home" | "services" | "areas" | "about" | "reviews" | "contact" | "faq" | "gallery" | "blog";
 
 const SERVICE_LINKS = [
   { label: "Septic Pumping", href: routes.servicePumping },
@@ -17,9 +17,11 @@ const SERVICE_LINKS = [
 ];
 
 const NAV_ITEMS: { key: PageKey; label: string; href: string; children?: typeof SERVICE_LINKS }[] = [
-  { key: "home", label: "Home", href: routes.home },
   { key: "services", label: "Services", href: routes.services, children: SERVICE_LINKS },
-  { key: "areas", label: "Service Areas", href: routes.serviceAreas },
+  { key: "areas", label: "Areas", href: routes.serviceAreas },
+  { key: "gallery", label: "Gallery", href: routes.gallery },
+  { key: "blog", label: "Blog", href: routes.blog },
+  { key: "faq", label: "FAQ", href: routes.faq },
   { key: "about", label: "About", href: routes.about },
   { key: "reviews", label: "Reviews", href: routes.reviews },
   { key: "contact", label: "Contact", href: routes.contact },

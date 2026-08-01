@@ -34,6 +34,9 @@ export default function Footer() {
           <div className={styles.linkList}>
             <Link href={routes.about} className={styles.link}>About / Meet Rick</Link>
             <Link href={routes.serviceAreas} className={styles.link}>Service Areas</Link>
+            <Link href={routes.gallery} className={styles.link}>Gallery</Link>
+            <Link href={routes.blog} className={styles.link}>Blog</Link>
+            <Link href={routes.faq} className={styles.link}>FAQ</Link>
             <Link href={routes.reviews} className={styles.link}>Reviews</Link>
             <Link href={routes.contact} className={styles.link}>Contact / Request Service</Link>
           </div>

@@ -45,15 +45,16 @@
 .nav {
   display: none;
   align-items: center;
-  gap: clamp(16px, 2.2vw, 34px);
+  gap: clamp(12px, 1.6vw, 24px);
 }
 
 .navLink {
   font-weight: 600;
-  font-size: 15.5px;
+  font-size: 14.5px;
   color: var(--color-ink);
   border-bottom: 2px solid transparent;
   padding-bottom: 5px;
+  white-space: nowrap;
 }
 
 .navLinkActive {
@@ -346,7 +347,7 @@
   padding: 16px 8px;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1200px) {
   .nav {
     display: flex;
   }

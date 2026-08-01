@@ -10,6 +10,9 @@ export const routes = {
   about: "/about",
   reviews: "/reviews",
   contact: "/contact",
+  faq: "/faq",
+  gallery: "/gallery",
+  blog: "/blog",
 } as const;
 
 export const business = {

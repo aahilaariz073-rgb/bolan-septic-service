@@ -1,0 +1,32 @@
+.body {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  margin: 0 0 22px;
+}
+
+.h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 24px;
+  margin: 36px 0 16px;
+}
+
+.ul {
+  margin: 0 0 22px;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.li {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
