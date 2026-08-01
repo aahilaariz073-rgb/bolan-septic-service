@@ -130,12 +130,12 @@
 .heroStatValue {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 24px;
+  font-size: 29px;
   color: var(--color-on-dark-stat);
 }
 
 .heroStatLabel {
-  font-size: 13.5px;
+  font-size: 15px;
   color: var(--color-on-dark-muted);
 }
 
