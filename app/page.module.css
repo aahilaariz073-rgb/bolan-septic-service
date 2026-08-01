@@ -266,48 +266,22 @@
 .serviceRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: clamp(360px, 38vw, 520px);
 }
 
 .serviceRowPhoto {
   order: 1;
+  height: clamp(360px, 38vw, 520px);
 }
 
 .serviceRowPhotoSecond {
   order: 2;
 }
 
-.photoPlaceholder {
+.serviceRowImg {
   width: 100%;
   height: 100%;
-  min-height: clamp(280px, 38vw, 520px);
-  background: var(--color-paper-muted);
-  background-image: repeating-linear-gradient(
-    135deg,
-    var(--color-border-soft) 0px,
-    var(--color-border-soft) 1px,
-    transparent 1px,
-    transparent 16px
-  );
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: var(--color-text-muted);
-  text-align: center;
-  padding: 24px;
-}
-
-.photoPlaceholderLabel {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.photoPlaceholderHint {
-  font-size: 14px;
+  object-fit: cover;
+  display: block;
 }
 
 .serviceRowText {
