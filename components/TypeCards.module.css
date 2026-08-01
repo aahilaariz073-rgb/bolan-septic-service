@@ -1,0 +1,47 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--color-border-soft);
+  border-left: 1px solid var(--color-border-soft);
+  margin-bottom: 52px;
+}
+
+.card {
+  padding: 28px;
+  border-right: 1px solid var(--color-border-soft);
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.cardCompact {
+  padding: 22px;
+  border-right: 1px solid var(--color-border-soft);
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.titleCompact {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+.desc {
+  font-size: 15.5px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.descCompact {
+  font-size: 14.5px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}

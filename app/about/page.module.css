@@ -1,0 +1,145 @@
+.bio {
+  padding: clamp(48px, 6vw, 84px) clamp(20px, 4vw, 48px);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.bioInner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: center;
+}
+
+.portraitCol {
+  flex: 1 1 340px;
+  min-width: 260px;
+}
+
+.portrait {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+}
+
+.copyCol {
+  flex: 1 1 420px;
+}
+
+.eyebrow {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-copper);
+  margin-bottom: 16px;
+}
+
+.h1 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(30px, 3.8vw, 44px);
+  margin: 0 0 20px;
+}
+
+.p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin: 0 0 18px;
+}
+
+.pLast {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.values {
+  background: var(--color-ink);
+  padding: 64px clamp(20px, 4vw, 48px);
+}
+
+.valuesGrid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0;
+}
+
+.valueItem {
+  padding: 0 28px 0 0;
+  margin-right: 28px;
+  border-right: 1px solid var(--color-on-dark-divider);
+}
+
+.valueTitle {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 19px;
+  color: var(--color-on-dark-heading);
+  margin: 0 0 10px;
+}
+
+.valueDesc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-on-dark-body);
+  margin: 0;
+}
+
+.crew {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px clamp(20px, 4vw, 48px);
+}
+
+.crewHeading {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0 0 28px;
+}
+
+.crewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.crewPhoto {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.credentials {
+  background: var(--color-paper-muted);
+  padding: 56px clamp(20px, 4vw, 48px);
+}
+
+.credentialsInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.credentialItem {
+  flex: 1 1 260px;
+  padding: 0 26px;
+  border-left: 1px solid var(--color-border);
+}
+
+.credentialTitle {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.credentialDesc {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}

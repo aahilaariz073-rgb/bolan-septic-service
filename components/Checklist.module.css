@@ -1,0 +1,26 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0 32px;
+}
+
+.item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  margin-top: 8px;
+  background: var(--color-copper);
+  flex-shrink: 0;
+}
+
+.text {
+  font-size: 15.5px;
+  line-height: 1.5;
+}

@@ -1,0 +1,46 @@
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px clamp(20px, 4vw, 48px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.sidebar {
+  flex: 1 1 320px;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarItem {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.sidebarItemLast {
+  padding: 22px 0;
+}
+
+.sidebarLabel {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-copper);
+  margin-bottom: 10px;
+}
+
+.sidebarPhone {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 26px;
+  display: block;
+}
+
+.sidebarValue {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+}

@@ -1,0 +1,34 @@
+.content {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 64px clamp(20px, 4vw, 48px);
+}
+
+.h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0 0 16px;
+}
+
+.h2Tight {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0 0 20px;
+}
+
+.intro {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin: 0 0 16px;
+}
+
+.block {
+  margin-bottom: 48px;
+}
+
+.noteSpaced {
+  margin-top: 32px;
+}

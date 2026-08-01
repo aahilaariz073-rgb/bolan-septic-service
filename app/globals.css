@@ -1,6 +1,7 @@
 :root {
   /* Brand blue lifted directly from the Bolan Septic logo (#1078B0) */
   --color-ink: oklch(19% 0.05 240);
+  --color-ink-deep: oklch(14% 0.055 240);
   --color-ink-text: oklch(15% 0.015 240);
 
   --color-paper: oklch(97% 0.006 235);

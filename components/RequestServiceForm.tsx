@@ -19,12 +19,12 @@ export default function RequestServiceForm() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <div id="request-form" className={styles.card}>
+    <div className={styles.card}>
       {submitted ? (
         <div className={styles.success}>
           <h2 className={styles.successTitle}>Request Received</h2>
           <p className={styles.successBody}>
-            Thanks — Ricky&apos;s team will call you back shortly. For anything urgent, call{" "}
+            Thanks — we&apos;ll call you back shortly. For anything urgent, call{" "}
             <a href={business.phoneHref} className={styles.successPhone}>
               {business.phone}
             </a>{" "}
@@ -33,8 +33,7 @@ export default function RequestServiceForm() {
         </div>
       ) : (
         <>
-          <h2 className={styles.title}>Request Service</h2>
-          <p className={styles.subtitle}>We&apos;ll call you back to confirm a time — usually same day.</p>
+          <h2 className={styles.title}>Tell Us What You Need</h2>
           <form
             className={styles.form}
             onSubmit={(e) => {
@@ -42,25 +41,40 @@ export default function RequestServiceForm() {
               setSubmitted(true);
             }}
           >
-            <input required type="text" placeholder="Full name" className={styles.field} />
-            <input required type="tel" placeholder="Phone number" className={styles.field} />
-            <input required type="text" placeholder="Service address" className={styles.field} />
-            <select required defaultValue="" className={styles.field}>
-              <option value="" disabled>
-                Service needed
-              </option>
-              {SERVICES_NEEDED.map((s) => (
-                <option key={s}>{s}</option>
-              ))}
-            </select>
-            <select required defaultValue="" className={styles.field}>
-              <option value="" disabled>
-                How urgent is this?
-              </option>
-              {URGENCY.map((u) => (
-                <option key={u}>{u}</option>
-              ))}
-            </select>
+            <label className={styles.label}>
+              Full name
+              <input required type="text" className={styles.field} />
+            </label>
+            <label className={styles.label}>
+              Phone number
+              <input required type="tel" className={styles.field} />
+            </label>
+            <label className={styles.label}>
+              Service address
+              <input required type="text" className={styles.field} />
+            </label>
+            <label className={styles.label}>
+              Service needed
+              <select required defaultValue="" className={styles.field}>
+                <option value="" disabled>
+                  Select a service
+                </option>
+                {SERVICES_NEEDED.map((s) => (
+                  <option key={s}>{s}</option>
+                ))}
+              </select>
+            </label>
+            <label className={styles.label}>
+              Urgency
+              <select required defaultValue="" className={styles.field}>
+                <option value="" disabled>
+                  How urgent is this?
+                </option>
+                {URGENCY.map((u) => (
+                  <option key={u}>{u}</option>
+                ))}
+              </select>
+            </label>
             <button type="submit" className={styles.submit}>
               Send Request
             </button>

@@ -21,4 +21,5 @@ export const business = {
   addressLine1: "800 E Wishkah St, Unit 204",
   addressLine2: "Aberdeen, WA 98520",
   hours: "Sun–Fri: 24-Hour Emergency · Saturday: Closed",
+  googleReviewUrl: "https://share.google/TNPxfQXRsNyVr5hCk",
 } as const;

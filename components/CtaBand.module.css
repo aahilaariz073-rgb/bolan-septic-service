@@ -1,0 +1,55 @@
+.band {
+  background: var(--color-ink);
+  padding: 60px clamp(20px, 4vw, 48px);
+  text-align: center;
+}
+
+.bandDeep {
+  background: var(--color-ink-deep);
+  padding: 60px clamp(20px, 4vw, 48px);
+  text-align: center;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 34px);
+  color: var(--color-on-dark-heading);
+  margin: 0 0 24px;
+}
+
+.body {
+  font-size: 17px;
+  color: var(--color-on-dark-body);
+  margin: 0 0 28px;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btnSolid {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-copper);
+  color: var(--color-btn-text);
+  font-weight: 700;
+  font-size: 17px;
+  padding: 16px 30px;
+  border-radius: 3px;
+}
+
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--color-on-dark-border);
+  color: var(--color-btn-outline-text);
+  font-weight: 600;
+  font-size: 17px;
+  padding: 15px 28px;
+  border-radius: 3px;
+}
