@@ -60,7 +60,7 @@ const localBusinessSchema = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5.0",
-    reviewCount: "24",
+    reviewCount: "25",
   },
   openingHoursSpecification: [
     {

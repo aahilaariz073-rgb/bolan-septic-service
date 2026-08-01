@@ -17,13 +17,9 @@ export default function ReviewsPage() {
   return (
     <div>
       <Header activePage="reviews" />
-      <PageHero eyebrow="Reviews" title="What Our Customers Say" description="★★★★★  5.0 out of 5 — 24 Google Reviews" />
+      <PageHero eyebrow="Reviews" title="What Our Customers Say" description="★★★★★  5.0 out of 5 — 25 Google Reviews" />
 
       <div className={styles.content}>
-        <div className={styles.notice}>
-          Note: the quotes below are placeholders showing how your Google reviews will be presented — swap them for
-          real customer quotes once pulled from your Google Business Profile.
-        </div>
         <div className={styles.grid}>
           {allReviews.map((rv) => (
             <div key={rv.quote} className={styles.card}>

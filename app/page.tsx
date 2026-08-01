@@ -154,7 +154,7 @@ export default function HomePage() {
             <div>
               <div className={styles.eyebrow}>Reputation</div>
               <h2 className={styles.h2Tight}>What Customers Say</h2>
-              <div className={styles.reviewsRating}>★★★★★ &nbsp;5.0 out of 5 — 24 Google reviews</div>
+              <div className={styles.reviewsRating}>★★★★★ &nbsp;5.0 out of 5 — 25 Google reviews</div>
             </div>
             <Link href={routes.reviews} className={styles.textLink}>
               Read all reviews

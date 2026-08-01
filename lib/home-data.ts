@@ -6,7 +6,7 @@ export const heroStats = [
 
 export const trustItems = [
   { value: "25+ Years", label: "Serving WA since 2000" },
-  { value: "5.0 / 24 Reviews", label: "Google customer rating" },
+  { value: "5.0 / 25 Reviews", label: "Google customer rating" },
   { value: "Licensed & Insured", label: "Washington State septic contractor" },
   { value: "24-Hour", label: "Emergency service, closed Saturdays" },
 ];
@@ -34,15 +34,17 @@ export const counties = ["Grays Harbor County", "Thurston County", "Mason County
 export const reviews = [
   {
     quote:
-      "Showed up on time, explained everything, and the price was fair. Exactly what you want from a septic company.",
-    name: "Google review — swap in real quote",
+      "I highly recommend this septic service. They came out immediately and pumped our tank out, giving us valuable guidance on how to clean up our system.",
+    name: "Frances M., Local Guide",
   },
   {
-    quote: "Needed a real estate inspection fast to close on time. Rick’s team got it done in a day.",
-    name: "Google review — swap in real quote",
+    quote:
+      "Excellent job. We had an inspection issue and he was able to get over there and get it fixed up for us, excellent work and very competitive pricing.",
+    name: "Matt M., Realtor",
   },
   {
-    quote: "Called on a Sunday with a backup and they actually picked up and came out. Lifesavers.",
-    name: "Google review — swap in real quote",
+    quote:
+      "Rick was awesome, he was able to troubleshoot my septic when others were not able to. He is quick, efficient, and knows his stuff. Would recommend for any septic issues.",
+    name: "Bona B.",
   },
 ];
