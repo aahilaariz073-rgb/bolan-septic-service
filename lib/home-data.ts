@@ -1,7 +1,7 @@
 export const heroStats = [
   { value: "25+", label: "Years in business" },
   { value: "5.0★", label: "Google rating" },
-  { value: "24/7", label: "Emergency line" },
+  { value: "24/6", label: "Emergency line" },
 ];
 
 export const trustItems = [
