@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ServiceShowcase from "@/components/ServiceShowcase";
 import { WHY_CHOOSE_ICONS } from "@/components/FeatureIcons";
 import { routes, business } from "@/lib/routes";
-import { heroStats, trustItems, serviceShowcase, counties, reviews, whyChooseUs } from "@/lib/home-data";
+import { heroStats, trustItems, counties, reviews, whyChooseUs } from "@/lib/home-data";
 import styles from "./page.module.css";
 
 export default function HomePage() {
@@ -88,29 +89,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-label="Service showcase">
-        {serviceShowcase.map((svc, i) => (
-          <div key={svc.title} className={styles.serviceRow}>
-            <div className={`${styles.serviceRowPhoto} ${i % 2 === 1 ? styles.serviceRowPhotoSecond : ""}`}>
-              <Image
-                src={svc.photo.src}
-                alt={svc.photo.alt}
-                width={svc.photo.width}
-                height={svc.photo.height}
-                sizes="(max-width: 760px) 100vw, 50vw"
-                className={styles.serviceRowImg}
-              />
-            </div>
-            <div className={styles.serviceRowText}>
-              <h3 className={styles.serviceRowTitle}>{svc.title}</h3>
-              <p className={styles.serviceRowDesc}>{svc.longDesc}</p>
-              <Link href={svc.href} className={styles.serviceRowCta}>
-                Learn More
-              </Link>
-            </div>
-          </div>
-        ))}
-      </section>
+      <ServiceShowcase />
 
       <section aria-label="Local and family-run" className={styles.truckBand}>
         <div className={styles.truckBandInner}>

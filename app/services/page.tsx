@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
-import { serviceLinks } from "@/lib/services-data";
-import styles from "./page.module.css";
+import ServiceShowcase from "@/components/ServiceShowcase";
 
 export const metadata: Metadata = {
   title: "Septic Services",
@@ -22,16 +20,7 @@ export default function ServicesPage() {
         title="Septic Services for Every Job — Big or Small"
         description="Pumping, inspections, repair, drain fields and new installations across Grays Harbor, Thurston, Mason & Lewis Counties."
       />
-      <div className={styles.grid}>
-        {serviceLinks.map((svc) => (
-          <Link key={svc.title} href={svc.href} className={styles.card}>
-            <div className={styles.num}>{svc.num}</div>
-            <div className={styles.title}>{svc.title}</div>
-            <p className={styles.desc}>{svc.desc}</p>
-            <span className={styles.link}>View details</span>
-          </Link>
-        ))}
-      </div>
+      <ServiceShowcase />
       <CtaBand
         heading="Not Sure What Your System Needs?"
         body="Call us and describe the problem — we'll tell you exactly what service to book."
