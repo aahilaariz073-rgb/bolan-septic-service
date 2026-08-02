@@ -5,19 +5,18 @@ import { business } from "@/lib/routes";
 import { SERVICE_OPTIONS } from "@/lib/lead-options";
 import styles from "./ChatWidget.module.css";
 
-type Step = "name" | "phone" | "service" | "done";
+type Stage = "form" | "done";
 type Message = { from: "bot" | "user"; text: string };
 
-const GREETING =
-  "Hi! 👋 I can pass your info straight to Rick's team so they can call you back. What's your name?";
+const GREETING = "Hi! 👋 Fill in your info below and I'll pass it straight to Rick's team so they can call you back.";
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
-  const [step, setStep] = useState<Step>("name");
+  const [stage, setStage] = useState<Stage>("form");
   const [messages, setMessages] = useState<Message[]>([]);
-  const [inputValue, setInputValue] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [service, setService] = useState("");
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -28,49 +27,27 @@ export default function ChatWidget() {
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
-  }, [messages]);
+  }, [messages, stage]);
 
-  const addMessages = (...msgs: Message[]) => setMessages((prev) => [...prev, ...msgs]);
-
-  const submitText = () => {
-    const value = inputValue.trim();
-    if (!value) return;
-    setInputValue("");
-
-    if (step === "name") {
-      setName(value);
-      addMessages(
-        { from: "user", text: value },
-        { from: "bot", text: `Thanks, ${value}! What's the best phone number to reach you?` }
-      );
-      setStep("phone");
-    } else if (step === "phone") {
-      setPhone(value);
-      addMessages(
-        { from: "user", text: value },
-        { from: "bot", text: "Got it. And what service are you looking for?" }
-      );
-      setStep("service");
-    }
-  };
-
-  const chooseService = (service: string) => {
-    addMessages(
-      { from: "user", text: service },
+  const submit = () => {
+    if (!name.trim() || !phone.trim() || !service) return;
+    setMessages((prev) => [
+      ...prev,
+      { from: "user", text: `${name} · ${phone} · ${service}` },
       {
         from: "bot",
-        text: `Perfect — Rick's team will call ${name || "you"} at ${phone} about ${service.toLowerCase()}. Talk soon!`,
-      }
-    );
-    setStep("done");
+        text: `Thanks, ${name}! Rick's team will call you at ${phone} about ${service.toLowerCase()}. Talk soon!`,
+      },
+    ]);
+    setStage("done");
   };
 
   const restart = () => {
     setMessages([{ from: "bot", text: GREETING }]);
-    setStep("name");
-    setInputValue("");
+    setStage("form");
     setName("");
     setPhone("");
+    setService("");
   };
 
   return (
@@ -132,43 +109,52 @@ export default function ChatWidget() {
                 <div className={`${styles.bubble} ${m.from === "bot" ? styles.bubbleBot : styles.bubbleUser}`}>{m.text}</div>
               </div>
             ))}
+
+            {stage === "form" && (
+              <form
+                className={styles.leadForm}
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  submit();
+                }}
+              >
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Your name"
+                  className={styles.input}
+                  required
+                />
+                <input
+                  type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="Your phone number"
+                  className={styles.input}
+                  required
+                />
+                <select
+                  value={service}
+                  onChange={(e) => setService(e.target.value)}
+                  className={styles.input}
+                  required
+                >
+                  <option value="" disabled>
+                    Service needed
+                  </option>
+                  {SERVICE_OPTIONS.map((s) => (
+                    <option key={s}>{s}</option>
+                  ))}
+                </select>
+                <button type="submit" className={styles.leadFormSubmit}>
+                  Send
+                </button>
+              </form>
+            )}
           </div>
 
-          {step === "service" && (
-            <div className={styles.quickReplies}>
-              {SERVICE_OPTIONS.map((s) => (
-                <button key={s} type="button" onClick={() => chooseService(s)} className={styles.quickReplyBtn}>
-                  {s}
-                </button>
-              ))}
-            </div>
-          )}
-
-          {(step === "name" || step === "phone") && (
-            <form
-              className={styles.inputRow}
-              onSubmit={(e) => {
-                e.preventDefault();
-                submitText();
-              }}
-            >
-              <input
-                type={step === "phone" ? "tel" : "text"}
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                placeholder={step === "name" ? "Your name" : "Your phone number"}
-                className={styles.input}
-                autoFocus
-              />
-              <button type="submit" disabled={!inputValue.trim()} aria-label="Send" className={styles.sendBtn}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M4 12h16M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </form>
-          )}
-
-          {step === "done" && (
+          {stage === "done" && (
             <div className={styles.doneRow}>
               <a href={business.phoneHref} className={styles.callBtn}>
                 Call {business.phone} now
