@@ -17,7 +17,7 @@ export const faqs = [
   {
     question: "What is an OSS inspection, and do I need one to sell my home?",
     answer:
-      "An On-Site Sewage (OSS) inspection checks your tank, drain field, and system components and produces the report that lenders, buyers, and county health departments often require before a home sale closes. We perform these across Grays Harbor, Thurston, Mason, and Lewis Counties.",
+      "An On-Site Sewage (OSS) inspection checks your tank, drain field, and system components and produces the report that lenders, buyers, and county health departments often require before a home sale closes. We perform these across Grays Harbor, Thurston, and Lewis Counties.",
   },
   {
     question: "Do septic inspection requirements vary by county?",
@@ -52,7 +52,7 @@ export const faqs = [
   {
     question: "What areas do you serve?",
     answer:
-      "Grays Harbor, Thurston, Mason, and Lewis Counties — roughly 50 miles from our Aberdeen headquarters. See our Service Areas page for the specific cities and towns.",
+      "Grays Harbor, Thurston, and Lewis Counties — roughly 50 miles from our Aberdeen headquarters. See our Service Areas page for the specific cities and towns.",
   },
   {
     question: "Are you licensed and insured?",

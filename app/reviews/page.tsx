@@ -11,7 +11,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Reviews",
   description:
-    "Read reviews for Bolan Septic Service — 5.0 out of 5 stars on Google from customers across Grays Harbor, Thurston, Mason & Lewis Counties, WA.",
+    "Read reviews for Bolan Septic Service — 5.0 out of 5 stars on Google from customers across Grays Harbor, Thurston & Lewis Counties, WA.",
 };
 
 export default function ReviewsPage() {
@@ -36,7 +36,7 @@ export default function ReviewsPage() {
       <section className={styles.googleBand}>
         <h2 className={styles.googleTitle}>Had a Good Experience With Us?</h2>
         <p className={styles.googleBody}>
-          A quick Google review helps other homeowners in Grays Harbor, Thurston, Mason and Lewis Counties find us.
+          A quick Google review helps other homeowners in Grays Harbor, Thurston and Lewis Counties find us.
         </p>
         <a href={business.googleReviewUrl} className={styles.googleBtn}>
           Leave a Google Review

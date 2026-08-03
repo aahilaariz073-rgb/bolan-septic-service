@@ -29,7 +29,7 @@ export const whyChooseUs: { icon: "clock" | "shield" | "checklist"; title: strin
   },
 ];
 
-export const counties = ["Grays Harbor County", "Thurston County", "Mason County", "Lewis County"];
+export const counties = ["Grays Harbor County", "Thurston County", "Lewis County"];
 
 export const reviews = [
   {

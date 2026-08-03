@@ -10,7 +10,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Contact / Request Service",
   description:
-    "Contact Bolan Septic Service or request service online. Call (360) 956-0134 or send your address and service needed — serving Grays Harbor, Thurston, Mason & Lewis Counties, WA.",
+    "Contact Bolan Septic Service or request service online. Call (360) 956-0134 or send your address and service needed — serving Grays Harbor, Thurston & Lewis Counties, WA.",
 };
 
 export default function ContactPage() {

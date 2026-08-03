@@ -10,11 +10,6 @@ export const counties = [
     cities: ["Olympia", "Lacey", "Tumwater", "Yelm", "Tenino"],
   },
   {
-    name: "Mason County",
-    blurb: "Serving Shelton and the Hood Canal area with pumping, inspections and repair.",
-    cities: ["Shelton", "Belfair", "Allyn"],
-  },
-  {
     name: "Lewis County",
     blurb: "Reliable septic service for Centralia, Chehalis and surrounding farm and timber properties.",
     cities: ["Centralia", "Chehalis", "Winlock"],

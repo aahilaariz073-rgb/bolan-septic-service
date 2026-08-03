@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Bolan Septic Service",
   },
   description:
-    "Septic pumping, inspections, repair, drain field and installation service in Aberdeen, Olympia & across Grays Harbor, Thurston, Mason & Lewis Counties, WA. Family-owned since 2000. 24-hour emergency service.",
+    "Septic pumping, inspections, repair, drain field and installation service in Aberdeen, Olympia & across Grays Harbor, Thurston & Lewis Counties, WA. Family-owned since 2000. 24-hour emergency service.",
 };
 
 export const viewport: Viewport = {
@@ -63,7 +63,6 @@ const localBusinessSchema = {
   areaServed: [
     { "@type": "AdministrativeArea", name: "Grays Harbor County, WA" },
     { "@type": "AdministrativeArea", name: "Thurston County, WA" },
-    { "@type": "AdministrativeArea", name: "Mason County, WA" },
     { "@type": "AdministrativeArea", name: "Lewis County, WA" },
   ],
   foundingDate: "2000",

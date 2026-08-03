@@ -15,7 +15,7 @@ import styles from "@/components/ServiceDetail.module.css";
 export const metadata: Metadata = {
   title: "Emergency Septic Service",
   description:
-    "24-hour emergency septic service in Grays Harbor, Thurston, Mason & Lewis Counties, WA. Backups, alarms and overflows — call (360) 956-0134.",
+    "24-hour emergency septic service in Grays Harbor, Thurston & Lewis Counties, WA. Backups, alarms and overflows — call (360) 956-0134.",
 };
 
 const schema = serviceSchema({

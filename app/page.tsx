@@ -28,7 +28,7 @@ export default function HomePage() {
             <div className={styles.eyebrowOnDark}>Family-Owned in Aberdeen, WA — Since 2000</div>
             <h1 className={styles.h1}>Septic Pumping, Inspections &amp; Repair You Can Trust</h1>
             <p className={styles.heroLede}>
-              Serving Grays Harbor, Thurston, Mason &amp; Lewis Counties with honest, on-time septic service —
+              Serving Grays Harbor, Thurston &amp; Lewis Counties with honest, on-time septic service —
               pumping, real estate inspections, repairs, drain fields and new installations.
             </p>
             <div className={styles.heroCtas}>
@@ -123,8 +123,8 @@ export default function HomePage() {
             <div className={styles.eyebrow}>Where We Work</div>
             <h2 className={styles.h2Tight}>Proudly Serving Southwest Washington</h2>
             <p className={styles.bodyText}>
-              We serve homes and businesses within roughly 50 miles of Aberdeen — Grays Harbor, Thurston, Mason and
-              Lewis Counties.
+              We serve homes and businesses within roughly 50 miles of Aberdeen — Grays Harbor, Thurston and Lewis
+              Counties.
             </p>
             <div className={styles.countyList}>
               {counties.map((c) => (

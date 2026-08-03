@@ -12,7 +12,7 @@ export default function Footer() {
         <div className={styles.brandCol}>
           <Image src="/uploads/logo.png" alt="Bolan Septic" width={167} height={83} className={styles.logo} />
           <p className={styles.brandDesc}>
-            Family-owned septic pumping, inspection, repair and installation serving Grays Harbor, Thurston, Mason &
+            Family-owned septic pumping, inspection, repair and installation serving Grays Harbor, Thurston &amp;
             Lewis Counties since 2000.
           </p>
           <p className={styles.brandLicense}>Licensed, bonded &amp; insured in Washington State.</p>
@@ -63,7 +63,7 @@ export default function Footer() {
 
       <div className={styles.bottom}>
         <span>© {year} Bolan Septic Service. All rights reserved.</span>
-        <span>Serving Aberdeen, Hoquiam, Olympia, Montesano, Elma, Shelton, Centralia, Ocean Shores &amp; surrounding areas.</span>
+        <span>Serving Aberdeen, Hoquiam, Olympia, Montesano, Elma, Centralia, Ocean Shores &amp; surrounding areas.</span>
       </div>
     </footer>
   );

@@ -15,7 +15,7 @@ import styles from "@/components/ServiceDetail.module.css";
 export const metadata: Metadata = {
   title: "Septic Inspections",
   description:
-    "Septic inspections in Grays Harbor, Thurston, Mason & Lewis Counties, WA — including real estate / OSS inspections for home sales. Fast turnaround for closings.",
+    "Septic inspections in Grays Harbor, Thurston & Lewis Counties, WA — including real estate / OSS inspections for home sales. Fast turnaround for closings.",
 };
 
 const schema = serviceSchema({

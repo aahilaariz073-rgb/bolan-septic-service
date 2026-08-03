@@ -26,7 +26,7 @@ export default function BlogIndexPage() {
       <PageHero
         eyebrow="Blog"
         title="Septic Tips & Local Guidance"
-        description="Practical advice for homeowners in Grays Harbor, Thurston, Mason & Lewis Counties — no jargon, no fluff."
+        description="Practical advice for homeowners in Grays Harbor, Thurston & Lewis Counties — no jargon, no fluff."
       />
       <div className={styles.content}>
         {sorted.map((post) => (

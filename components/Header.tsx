@@ -39,7 +39,7 @@ export default function Header({ activePage }: { activePage: PageKey }) {
   return (
     <header className={styles.wrap}>
       <div className={styles.topbar}>
-        <span>Grays Harbor · Thurston · Mason · Lewis Counties, WA</span>
+        <span>Grays Harbor · Thurston · Lewis Counties, WA</span>
         <span className={styles.topbarDivider}>|</span>
         <span>24-Hour Emergency Service — Closed Saturdays</span>
       </div>

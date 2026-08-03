@@ -10,7 +10,7 @@ import { routes } from "@/lib/routes";
 export const metadata: Metadata = {
   title: "Septic Services",
   description:
-    "Septic services in Grays Harbor, Thurston, Mason & Lewis Counties, WA: pumping, inspections, repair, drain field and new installation. Family-owned since 2000.",
+    "Septic services in Grays Harbor, Thurston & Lewis Counties, WA: pumping, inspections, repair, drain field and new installation. Family-owned since 2000.",
 };
 
 export default function ServicesPage() {
@@ -21,7 +21,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Our Services"
         title="Septic Services for Every Job — Big or Small"
-        description="Pumping, inspections, repair, drain fields and new installations across Grays Harbor, Thurston, Mason & Lewis Counties."
+        description="Pumping, inspections, repair, drain fields and new installations across Grays Harbor, Thurston & Lewis Counties."
       />
       <ServiceShowcase />
       <CtaBand

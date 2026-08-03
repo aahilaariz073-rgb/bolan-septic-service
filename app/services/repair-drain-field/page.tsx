@@ -14,7 +14,7 @@ import styles from "@/components/ServiceDetail.module.css";
 export const metadata: Metadata = {
   title: "Septic Repair & Drain Field",
   description:
-    "Septic repair and drain field repair in Grays Harbor, Thurston, Mason & Lewis Counties, WA. Tank, baffle, riser and drain field repairs done right.",
+    "Septic repair and drain field repair in Grays Harbor, Thurston & Lewis Counties, WA. Tank, baffle, riser and drain field repairs done right.",
 };
 
 const schema = serviceSchema({

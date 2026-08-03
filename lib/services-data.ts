@@ -11,7 +11,7 @@ export const serviceShowcase = [
   {
     title: "Septic Inspections",
     longDesc:
-      "Buying or selling a home in Washington almost always means an OSS (On-Site Sewage) inspection first. We perform real estate and routine septic inspections across Grays Harbor, Thurston, Mason and Lewis Counties, with same-week scheduling and a written report fast enough to keep your closing on track.",
+      "Buying or selling a home in Washington almost always means an OSS (On-Site Sewage) inspection first. We perform real estate and routine septic inspections across Grays Harbor, Thurston and Lewis Counties, with same-week scheduling and a written report fast enough to keep your closing on track.",
     href: routes.serviceInspections,
     photo: { src: "/uploads/services/svc-5-manhole-open.webp", alt: "Technician opening a septic tank access lid for inspection", width: 1200, height: 800 },
   },
@@ -41,7 +41,7 @@ export const serviceShowcase = [
 export const pumping = {
   title: "Septic Tank Pumping",
   description:
-    "Fast, honest tank pumping across Grays Harbor, Thurston, Mason and Lewis Counties — routine maintenance or same-day emergency calls.",
+    "Fast, honest tank pumping across Grays Harbor, Thurston and Lewis Counties — routine maintenance or same-day emergency calls.",
   intro: [
     "Most homes in Western Washington need their septic tank pumped every 3–5 years, depending on household size and tank capacity — sooner for larger families or older systems. Skipping pumping lets solids build up and migrate into your drain field, which is the single most common (and most expensive) way septic systems fail.",
     "We pump, inspect the baffles and tees while we're there, and let you know if anything else needs attention — no upselling, no surprises.",
@@ -61,7 +61,7 @@ export const pumping = {
     { title: "Report & Recommend", desc: "You get a plain-language rundown of your system's condition and next recommended service date." },
   ],
   areaNote:
-    "We regularly pump tanks in Aberdeen, Hoquiam, Ocean Shores, Montesano and Elma in Grays Harbor County; Olympia, Lacey and Tumwater in Thurston County; Shelton in Mason County; and Centralia and Chehalis in Lewis County.",
+    "We regularly pump tanks in Aberdeen, Hoquiam, Ocean Shores, Montesano and Elma in Grays Harbor County; Olympia, Lacey and Tumwater in Thurston County; and Centralia and Chehalis in Lewis County.",
 };
 
 export const inspections = {
@@ -83,7 +83,7 @@ export const inspections = {
   blurb:
     "Most Washington counties require a current OSS (on-site sewage system) inspection report before closing on a home with a septic system. We work directly with real estate agents, title companies and homeowners to get inspections scheduled and reports delivered fast — so financing deadlines don't slip.",
   areaNote:
-    "Serving real estate transactions and routine checkups in Aberdeen, Hoquiam, Ocean Shores, Montesano and Elma in Grays Harbor County; Olympia, Lacey and Tumwater in Thurston County; Shelton in Mason County; and Centralia and Chehalis in Lewis County.",
+    "Serving real estate transactions and routine checkups in Aberdeen, Hoquiam, Ocean Shores, Montesano and Elma in Grays Harbor County; Olympia, Lacey and Tumwater in Thurston County; and Centralia and Chehalis in Lewis County.",
 };
 
 export const repair = {
@@ -101,7 +101,7 @@ export const repair = {
   blurb:
     "A failing drain field shows up as standing water, sewage odor, or unusually green grass over the lines. We inspect the field, check distribution boxes and lines with a camera when needed, and recommend the least invasive fix that solves the problem — from jetting and rest periods to partial or full field replacement.",
   areaNote:
-    "We repair systems in Aberdeen, Hoquiam, Ocean Shores, Montesano and Elma in Grays Harbor County; Olympia, Lacey and Tumwater in Thurston County; Shelton in Mason County; and Centralia and Chehalis in Lewis County.",
+    "We repair systems in Aberdeen, Hoquiam, Ocean Shores, Montesano and Elma in Grays Harbor County; Olympia, Lacey and Tumwater in Thurston County; and Centralia and Chehalis in Lewis County.",
 };
 
 export const installation = {
@@ -121,7 +121,7 @@ export const installation = {
     { title: "Final Inspection & Walkthrough", desc: "We coordinate the county sign-off and walk you through operating your new system." },
   ],
   areaNote:
-    "We install systems in Aberdeen, Hoquiam, Ocean Shores, Montesano and Elma in Grays Harbor County; Olympia, Lacey and Tumwater in Thurston County; Shelton in Mason County; and Centralia and Chehalis in Lewis County.",
+    "We install systems in Aberdeen, Hoquiam, Ocean Shores, Montesano and Elma in Grays Harbor County; Olympia, Lacey and Tumwater in Thurston County; and Centralia and Chehalis in Lewis County.",
 };
 
 export const emergency = {
@@ -143,5 +143,5 @@ export const emergency = {
     "Note when the problem started and anything unusual (recent heavy use, rain, etc.) to tell our technician.",
   ],
   areaNote:
-    "We respond to septic emergencies in Aberdeen, Hoquiam, Ocean Shores, Montesano and Elma in Grays Harbor County; Olympia, Lacey and Tumwater in Thurston County; Shelton in Mason County; and Centralia and Chehalis in Lewis County.",
+    "We respond to septic emergencies in Aberdeen, Hoquiam, Ocean Shores, Montesano and Elma in Grays Harbor County; Olympia, Lacey and Tumwater in Thurston County; and Centralia and Chehalis in Lewis County.",
 };

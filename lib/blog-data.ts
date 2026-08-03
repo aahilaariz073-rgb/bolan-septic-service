@@ -165,7 +165,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "That means the honest answer to \"do I need one?\" is: it depends on which of our four counties your property is in, and that can change. Rather than guess, call us with the address and your target closing date — we'll tell you exactly what's required and get it scheduled with enough runway that it doesn't hold up the sale.",
+        text: "That means the honest answer to \"do I need one?\" is: it depends on which of our three counties your property is in, and that can change. Rather than guess, call us with the address and your target closing date — we'll tell you exactly what's required and get it scheduled with enough runway that it doesn't hold up the sale.",
       },
       { type: "h2", text: "Why timing matters" },
       {
@@ -216,7 +216,7 @@ export const blogPosts: BlogPost[] = [
       { type: "h2", text: "How we can help" },
       {
         type: "p",
-        text: "We're OSS certified and already perform real estate inspections across Grays Harbor, Thurston, Mason, and Lewis Counties under the current county-by-county rules. If you're thinking about selling anytime in the next couple of years, getting a baseline inspection now — before the statewide requirement kicks in and everyone's booking at once — is a good way to get ahead of it.",
+        text: "We're OSS certified and already perform real estate inspections across Grays Harbor, Thurston, and Lewis Counties under the current county-by-county rules. If you're thinking about selling anytime in the next couple of years, getting a baseline inspection now — before the statewide requirement kicks in and everyone's booking at once — is a good way to get ahead of it.",
       },
     ],
   },

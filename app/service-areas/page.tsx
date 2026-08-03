@@ -11,7 +11,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Service Areas",
   description:
-    "Bolan Septic Service serves Grays Harbor, Thurston, Mason & Lewis Counties, WA — Aberdeen, Hoquiam, Olympia, Montesano, Elma, Shelton, Centralia, Ocean Shores and more.",
+    "Bolan Septic Service serves Grays Harbor, Thurston & Lewis Counties, WA — Aberdeen, Hoquiam, Olympia, Montesano, Elma, Centralia, Ocean Shores and more.",
 };
 
 export default function ServiceAreasPage() {
@@ -22,7 +22,7 @@ export default function ServiceAreasPage() {
       <PageHero
         eyebrow="Service Areas"
         title="Serving Southwest Washington, Within 50 Miles of Aberdeen"
-        description="Grays Harbor, Thurston, Mason and Lewis Counties — from the coast to the county lines."
+        description="Grays Harbor, Thurston and Lewis Counties — from the coast to the county lines."
       />
       <div className={styles.content}>
         {counties.map((county) => (

@@ -11,7 +11,6 @@ export function serviceSchema({ name, description, url }: { name: string; descri
     areaServed: [
       { "@type": "AdministrativeArea", name: "Grays Harbor County, WA" },
       { "@type": "AdministrativeArea", name: "Thurston County, WA" },
-      { "@type": "AdministrativeArea", name: "Mason County, WA" },
       { "@type": "AdministrativeArea", name: "Lewis County, WA" },
     ],
     url: `${SITE_URL}${url}`,

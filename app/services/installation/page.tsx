@@ -15,7 +15,7 @@ import styles from "@/components/ServiceDetail.module.css";
 export const metadata: Metadata = {
   title: "Septic Installation",
   description:
-    "Septic system installation in Grays Harbor, Thurston, Mason & Lewis Counties, WA. New construction and full system replacements.",
+    "Septic system installation in Grays Harbor, Thurston & Lewis Counties, WA. New construction and full system replacements.",
 };
 
 const schema = serviceSchema({
