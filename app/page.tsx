@@ -138,12 +138,22 @@ export default function HomePage() {
             </Link>
           </div>
           <div className={styles.areaCard}>
-            <div className={styles.areaCardEyebrow}>Headquartered In Aberdeen</div>
-            <div className={styles.areaCardLine1}>{business.addressLine1}</div>
-            <div className={styles.areaCardLine2}>{business.addressLine2}</div>
-            <a href={business.phoneHref} className={styles.areaCardCall}>
-              Call {business.phone}
-            </a>
+            <div className={styles.areaCardMap}>
+              <iframe
+                src="https://www.google.com/maps?q=800+E+Wishkah+St+Unit+204,+Aberdeen,+WA+98520&output=embed"
+                title="Map of Bolan Septic Service headquarters in Aberdeen, WA"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div className={styles.areaCardBody}>
+              <div className={styles.areaCardEyebrow}>Headquartered In Aberdeen</div>
+              <div className={styles.areaCardLine1}>{business.addressLine1}</div>
+              <div className={styles.areaCardLine2}>{business.addressLine2}</div>
+              <a href={business.phoneHref} className={styles.areaCardCall}>
+                Call {business.phone}
+              </a>
+            </div>
           </div>
         </div>
       </section>
